@@ -1,0 +1,9 @@
+E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\bin\Debug\controladorServidor.dll
+E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\bin\Debug\controladorServidor.pdb
+E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\bin\Debug\controladorServidor.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\controladorServidor.Resources.resources
+obj\Release\controladorServidor.vbproj.GenerateResource.Cache
+obj\Release\controladorServidor.dll
+obj\Release\controladorServidor.xml
+obj\Release\controladorServidor.pdb

@@ -1,0 +1,18 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\dao.vbproj.GenerateResource.Cache
+E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\dao.dll
+E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\dao.pdb
+E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\dao.xml
+obj\Release\dao.Resources.resources
+obj\Release\dao.dll
+obj\Release\dao.xml
+obj\Release\dao.pdb
+bin\Debug\dao.dll
+bin\Debug\dao.pdb
+bin\Debug\dao.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\dao.Resources.resources
+obj\Debug\dao.vbproj.GenerateResource.Cache
+obj\Debug\dao.dll
+obj\Debug\dao.xml
+obj\Debug\dao.pdb
