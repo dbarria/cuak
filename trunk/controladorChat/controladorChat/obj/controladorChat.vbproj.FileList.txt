@@ -1,0 +1,18 @@
+bin\Debug\controladorChat.dll
+bin\Debug\controladorChat.pdb
+bin\Debug\controladorChat.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\controladorChat.Resources.resources
+obj\Debug\controladorChat.vbproj.GenerateResource.Cache
+obj\Debug\controladorChat.dll
+obj\Debug\controladorChat.xml
+obj\Debug\controladorChat.pdb
+E:\Visual Studio 2005\Projects\chatSD\chatSD\bin\Debug\controladorChat.dll
+E:\Visual Studio 2005\Projects\chatSD\chatSD\bin\Debug\controladorChat.pdb
+E:\Visual Studio 2005\Projects\chatSD\chatSD\bin\Debug\controladorChat.xml
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\controladorChat.Resources.resources
+obj\Release\controladorChat.vbproj.GenerateResource.Cache
+obj\Release\controladorChat.dll
+obj\Release\controladorChat.xml
+obj\Release\controladorChat.pdb
