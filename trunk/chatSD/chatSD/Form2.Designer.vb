@@ -40,6 +40,7 @@ Partial Class Form2
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
         Me.PictureBox4 = New System.Windows.Forms.PictureBox
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
+        Me.barraEstado = New System.Windows.Forms.Label
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -248,12 +249,26 @@ Partial Class Form2
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LinkLabel1.Font = New System.Drawing.Font("Verdana", 9.0!)
         Me.LinkLabel1.Location = New System.Drawing.Point(147, 526)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(123, 13)
+        Me.LinkLabel1.Size = New System.Drawing.Size(160, 14)
         Me.LinkLabel1.TabIndex = 41
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Registrar Nuevo Usuario"
+        '
+        'barraEstado
+        '
+        Me.barraEstado.AutoSize = True
+        Me.barraEstado.BackColor = System.Drawing.Color.Transparent
+        Me.barraEstado.Font = New System.Drawing.Font("Verdana", 13.0!, System.Drawing.FontStyle.Bold)
+        Me.barraEstado.ForeColor = System.Drawing.Color.White
+        Me.barraEstado.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.barraEstado.Location = New System.Drawing.Point(113, 565)
+        Me.barraEstado.Name = "barraEstado"
+        Me.barraEstado.Size = New System.Drawing.Size(17, 22)
+        Me.barraEstado.TabIndex = 42
+        Me.barraEstado.Text = "·"
         '
         'Form2
         '
@@ -263,6 +278,7 @@ Partial Class Form2
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(424, 589)
+        Me.Controls.Add(Me.barraEstado)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox6)
@@ -316,4 +332,5 @@ Partial Class Form2
     Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents barraEstado As System.Windows.Forms.Label
 End Class

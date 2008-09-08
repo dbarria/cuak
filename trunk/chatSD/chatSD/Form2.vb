@@ -38,6 +38,8 @@ Public Class Form2
         contp = contp + 1
         If contp = 3 Then
             Form1.Show()
+            Form1.Hide()
+
 
         End If
         If flagvisible = 1 And contp = 30 Then
