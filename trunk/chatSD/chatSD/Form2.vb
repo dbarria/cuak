@@ -3,6 +3,8 @@ Public Class Form2
 
     Dim frm1 As Form1()
     Public flagvisible As Int16
+    Public estado As Int16
+    Public timeCounter As Int16
     Public contp As Int16
 
     Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
@@ -19,6 +21,8 @@ Public Class Form2
 
     Private Sub Form2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         flagvisible = 1
+        estado = 0
+        timeCounter = 0
         'Me.BackColor = Color.PowderBlue
         Me.ForeColor = Color.Blue
         contp = 0
@@ -37,8 +41,8 @@ Public Class Form2
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         contp = contp + 1
         If contp = 3 Then
-            Form1.Show()
-            Form1.Hide()
+            'Form1.Show()
+            'Form1.Hide()
 
 
         End If
@@ -59,9 +63,16 @@ Public Class Form2
 
     Private Sub btnConectar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConectar.Click
         If txtUsuario.Text <> "" Then
-            Form1.Visible = True
-            Me.Visible = False
+
+
+            barraEstado.Text = "Iniciando Sesión"
+            Timer2.Enabled = True
+            Timer2.Start()
+
             Form1.conectar()
+            estado = 1
+            Me.Visible = False
+            Form1.Visible = True
         Else
             MsgBox("Ingresa el nombre de usuario")
         End If
@@ -93,5 +104,19 @@ Public Class Form2
 
     Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
         Process.Start("c:\Windows\hh.exe", ".\Ayuda.chm::/Bienvenida.htm")
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        barraEstado.Text = barraEstado.Text + "."
+        timeCounter = timeCounter + 1
+        If timeCounter = 4 Then
+            barraEstado.Text = "Iniciando Sesión"
+            timeCounter = 0
+        End If
+
+        If estado = 1 Then
+            Timer2.Stop()
+
+        End If
     End Sub
 End Class

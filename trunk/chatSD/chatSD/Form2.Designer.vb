@@ -41,6 +41,7 @@ Partial Class Form2
         Me.PictureBox4 = New System.Windows.Forms.PictureBox
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         Me.barraEstado = New System.Windows.Forms.Label
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -266,9 +267,12 @@ Partial Class Form2
         Me.barraEstado.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.barraEstado.Location = New System.Drawing.Point(113, 565)
         Me.barraEstado.Name = "barraEstado"
-        Me.barraEstado.Size = New System.Drawing.Size(17, 22)
+        Me.barraEstado.Size = New System.Drawing.Size(0, 22)
         Me.barraEstado.TabIndex = 42
-        Me.barraEstado.Text = "·"
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 250
         '
         'Form2
         '
@@ -333,4 +337,5 @@ Partial Class Form2
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents barraEstado As System.Windows.Forms.Label
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 End Class

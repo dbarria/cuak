@@ -10,6 +10,13 @@ Public Class Form1
     Public contpre As Int16
     Public largodato As Integer
     Public tempRecibidos As String
+    Public Sub Wait(ByVal seconds As Single)
+        Dim newDate As Date
+        newDate = DateAndTime.Now.AddSeconds(seconds)
+        While DateAndTime.Now.Second <> newDate.Second
+            Application.DoEvents()
+        End While
+    End Sub
 
 
     Private Sub Form1_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
@@ -32,6 +39,12 @@ Public Class Form1
 
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+
+    End Sub
+
+    Sub conectar()
+        'Wait(2)
         'flagvisible = 1
         txtFlag.Text = 0
         flagD = 0
@@ -48,10 +61,6 @@ Public Class Form1
             'Me conecto
             .Conectar()
         End With
-
-    End Sub
-
-    Sub conectar()
         txtUsuario.Text = Form2.txtUsuario.Text
         Me.Text = "MSN SD - " & txtUsuario.Text
         WinSockCliente2.EnviarDatos(txtUsuario.Text & ": /nueva_conexion")

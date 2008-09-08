@@ -1010,6 +1010,9 @@
         gfmNdA0YYIABBioaiL16ugYMMMAAAxUNxDlXugYMMMAAAxUN/PnmvfB7zW8GAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>211, 17</value>
+  </metadata>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAYEAAAKTCAYAAAD/r7QpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
