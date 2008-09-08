@@ -2,7 +2,7 @@
 <config>
   <servidor codigo="servidor1">
 	<id>1</id>
-    <server>WOLF\WOLF</server>
+    <server>macpc\SQLEXPRESS</server>
 	<bd>chat</bd>
   </servidor>
 </config>
