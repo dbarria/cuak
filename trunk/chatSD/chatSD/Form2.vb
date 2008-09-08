@@ -26,7 +26,7 @@ Public Class Form2
         conf.config()
         txtIP.Text = conf.ip
         txtPuerto.Text = conf.port
-        GroupBox1.Visible = False
+
     End Sub
 
     Private Sub AgregarUsuarioToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AgregarUsuarioToolStripMenuItem1.Click
@@ -46,7 +46,7 @@ Public Class Form2
             Form1.PictureBox2.Visible = False
             Form1.Label4.Visible = False
             Form1.Visible = False
-            GroupBox1.Visible = True
+
             txtUsuario.Focus()
             flagvisible = 0
         End If
@@ -63,5 +63,9 @@ Public Class Form2
         Else
             MsgBox("Ingresa el nombre de usuario")
         End If
+    End Sub
+
+    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
     End Sub
 End Class
