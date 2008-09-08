@@ -29,7 +29,7 @@ Public Class Form2
 
     End Sub
 
-    Private Sub AgregarUsuarioToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AgregarUsuarioToolStripMenuItem1.Click
+    Private Sub AgregarUsuarioToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Form4.Show()
         Me.Hide()
     End Sub
@@ -67,5 +67,29 @@ Public Class Form2
 
     Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
+    End Sub
+
+    Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Form4.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub PictureBox3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
+        Dim id As Integer
+        Try
+            Dim proceso As System.Diagnostics.Process
+            id = Process.GetCurrentProcess.Id
+            proceso = Process.GetProcessById(id)
+            proceso.Kill()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
+        Process.Start("c:\Windows\hh.exe", ".\Ayuda.chm::/Bienvenida.htm")
     End Sub
 End Class

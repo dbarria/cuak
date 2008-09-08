@@ -24,10 +24,7 @@ Partial Class Form2
         Me.txtPuerto = New System.Windows.Forms.TextBox
         Me.txtIP = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.AgregarUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.AgregarUsuarioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.btnConectar = New System.Windows.Forms.Button
         Me.txtClave = New System.Windows.Forms.TextBox
@@ -39,10 +36,16 @@ Partial Class Form2
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.Label4 = New System.Windows.Forms.Label
         Me.Label5 = New System.Windows.Forms.Label
-        Me.MenuStrip1.SuspendLayout()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPuerto
@@ -70,38 +73,14 @@ Partial Class Form2
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Usuario"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(378, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 13)
-        Me.Label2.TabIndex = 26
-        Me.Label2.Text = "Clave"
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.BackgroundImage = CType(resources.GetObject("MenuStrip1.BackgroundImage"), System.Drawing.Image)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(424, 24)
         Me.MenuStrip1.TabIndex = 25
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'AgregarUsuarioToolStripMenuItem
-        '
-        Me.AgregarUsuarioToolStripMenuItem.BackgroundImage = CType(resources.GetObject("AgregarUsuarioToolStripMenuItem.BackgroundImage"), System.Drawing.Image)
-        Me.AgregarUsuarioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarUsuarioToolStripMenuItem1})
-        Me.AgregarUsuarioToolStripMenuItem.Name = "AgregarUsuarioToolStripMenuItem"
-        Me.AgregarUsuarioToolStripMenuItem.Size = New System.Drawing.Size(45, 20)
-        Me.AgregarUsuarioToolStripMenuItem.Text = "Menú"
-        '
-        'AgregarUsuarioToolStripMenuItem1
-        '
-        Me.AgregarUsuarioToolStripMenuItem1.Name = "AgregarUsuarioToolStripMenuItem1"
-        Me.AgregarUsuarioToolStripMenuItem1.Size = New System.Drawing.Size(163, 22)
-        Me.AgregarUsuarioToolStripMenuItem1.Text = "Agregar Usuario"
         '
         'Timer1
         '
@@ -110,13 +89,15 @@ Partial Class Form2
         '
         'btnConectar
         '
+        Me.btnConectar.BackColor = System.Drawing.Color.Transparent
         Me.btnConectar.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.btnConectar.ForeColor = System.Drawing.Color.DimGray
         Me.btnConectar.Location = New System.Drawing.Point(274, 476)
         Me.btnConectar.Name = "btnConectar"
-        Me.btnConectar.Size = New System.Drawing.Size(75, 23)
+        Me.btnConectar.Size = New System.Drawing.Size(89, 26)
         Me.btnConectar.TabIndex = 27
-        Me.btnConectar.Text = "conectar"
-        Me.btnConectar.UseVisualStyleBackColor = True
+        Me.btnConectar.Text = "Ingresar"
+        Me.btnConectar.UseVisualStyleBackColor = False
         '
         'txtClave
         '
@@ -124,6 +105,7 @@ Partial Class Form2
         Me.txtClave.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtClave.Location = New System.Drawing.Point(57, 334)
         Me.txtClave.Name = "txtClave"
+        Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(121, 27)
         Me.txtClave.TabIndex = 29
         Me.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -168,12 +150,15 @@ Partial Class Form2
         Me.TextBox2.AutoCompleteCustomSource.AddRange(New String() {"ihc.cl", "ideauno.cl", "google.cl"})
         Me.TextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.TextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox2.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(228, 294)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(103, 27)
         Me.TextBox2.TabIndex = 32
+        Me.TextBox2.Text = "ihc.cl"
         '
         'PictureBox1
         '
@@ -223,13 +208,65 @@ Partial Class Form2
         Me.Label5.TabIndex = 36
         Me.Label5.Text = "(requerido)"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox3.Location = New System.Drawing.Point(1, 1)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 28)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 37
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox6.Location = New System.Drawing.Point(393, 1)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(30, 28)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox6.TabIndex = 38
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox4.Location = New System.Drawing.Point(-3, 561)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(425, 4)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox4.TabIndex = 39
+        Me.PictureBox4.TabStop = False
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LinkLabel1.Location = New System.Drawing.Point(147, 526)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(123, 13)
+        Me.LinkLabel1.TabIndex = 41
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Registrar Nuevo Usuario"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(424, 589)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.PictureBox2)
@@ -243,7 +280,6 @@ Partial Class Form2
         Me.Controls.Add(Me.txtIP)
         Me.Controls.Add(Me.txtClave)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -251,11 +287,12 @@ Partial Class Form2
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " MSN-SD"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -264,10 +301,7 @@ Partial Class Form2
     Friend WithEvents txtIP As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents AgregarUsuarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AgregarUsuarioToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents btnConectar As System.Windows.Forms.Button
     Friend WithEvents txtClave As System.Windows.Forms.TextBox
     Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
@@ -278,4 +312,8 @@ Partial Class Form2
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class
