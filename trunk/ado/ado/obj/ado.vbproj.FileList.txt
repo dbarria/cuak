@@ -1,9 +1,0 @@
-E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\ado.dll
-E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\ado.pdb
-E:\Visual Studio 2005\Projects\ServidorChat\ServidorChat\ado.xml
-obj\Release\ResolveAssemblyReference.cache
-obj\Release\ado.Resources.resources
-obj\Release\ado.vbproj.GenerateResource.Cache
-obj\Release\ado.dll
-obj\Release\ado.xml
-obj\Release\ado.pdb
