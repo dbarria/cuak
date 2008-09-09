@@ -134,6 +134,7 @@ Public Class Form1
         'If flagvisible = 1 And contpre = 10 Then
         'Me.Visible = False
 
+
         'Form2.Show()
         'flagvisible = 0
         'Timer1.Enabled = False
@@ -213,7 +214,7 @@ Public Class Form1
                                 'No agrego al propio usuario (al yo) a la tabla y listado de conectados.
                                 If user <> txtUsuario.Text Then
                                     ListBox2.Items.Add(user)
-                                    ListView1.Items.Add(New System.Windows.Forms.ListViewItem(user, 0))
+
 
 
 
@@ -329,6 +330,13 @@ Public Class Form1
 
 
         End If
+
+
+
+
+
+
+
     End Sub
 
     Sub abrirventana()
@@ -431,37 +439,177 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Try
 
-            If ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 1 Then
+        If Me.ListView1.SelectedItems.Item(0).ImageIndex = 0 Then
+            'usuario conecatdo
+            If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
                 Dim fmr3 As Form3 = New Form3()
                 fmr3.Show()
-                fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
+                fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
                 fmr3.BackColor = Color.Azure
                 fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
                 fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
-                ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 0
+                ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 0
                 'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
             End If
-
-            If ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 1 Then
+        Else
+            'usuario desconectado
+            If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
                 Dim fmr3 As Form3 = New Form3()
                 fmr3.Show()
-                fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
+                fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
                 fmr3.BackColor = Color.Beige
                 fmr3.ForeColor = Color.Red
                 fmr3.Text = fmr3.TextBox1.Text & " ¡¡Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
                 fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
-                ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 0
+                ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 0
                 'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
             End If
+        End If
 
-        Catch ex As Exception
+    End Sub
 
-        End Try
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        Dim indiceItem As Integer
+
+        Dim ListViewItemTemp As System.Windows.Forms.ListViewItem
+        Dim s As String
+        For Each s In ListBox2.Items
+
+
+            'ListView1.Items.Contains(ListViewItemTemp)
+            indiceItem = buscar(ListView1, s, 0)
+
+            If indiceItem > -1 Then
+                'entonces el usuario existe como conectado en mi lista
+            Else
+
+                'entonces el usuario conectado no está en mi lista
+                indiceItem = buscar(ListView1, s, 1)
+                If indiceItem > -1 Then
+
+
+                    'el usuario está como no conectado en mi lista, lo cambio a conectado
+
+                    ListView1.Items.Item(indiceItem).ImageIndex = 0
+
+
+                    'ListView1.Items.RemoveAt(indiceItem)
+
+                    'ListViewItemTemp = New System.Windows.Forms.ListViewItem(s, 0)
+                    'ListView1.Items.Add(ListViewItemTemp)
+
+
+                Else
+                    'el usuario  no está como no conectado, debo agregarlo como conectado
+                    ListViewItemTemp = New System.Windows.Forms.ListViewItem(s, 0)
+                    ListView1.Items.Add(ListViewItemTemp)
+                End If
+
+
+
+            End If
+
+
+
+
+
+        Next s
+
+
+        For Each s In ListBox3.Items
+
+
+            'ListView1.Items.Contains(ListViewItemTemp)
+            indiceItem = buscar(ListView1, s, 1)
+
+            If indiceItem > -1 Then
+                'entonces el usuario existe como no conectado en mi lista
+            Else
+
+                'entonces el usuario no conectado no está en mi lista
+                indiceItem = buscar(ListView1, s, 0)
+                If indiceItem > -1 Then
+
+
+                    'el usuario está como  conectado en mi lista, lo cambio a no conectado
+
+                    'ListView1.Items.RemoveAt(indiceItem)
+
+                    'ListViewItemTemp = New System.Windows.Forms.ListViewItem(s, 1)
+                    'ListView1.Items.Add(ListViewItemTemp)
+
+                    ListView1.Items.Item(indiceItem).ImageIndex = 1
+
+                Else
+                    'el usuario  no está como conectado, debo agregarlo como no conectado
+                    ListViewItemTemp = New System.Windows.Forms.ListViewItem(s, 1)
+                    ListView1.Items.Add(ListViewItemTemp)
+                End If
+
+
+
+            End If
+
+
+
+
+
+        Next s
+
+
+
+    End Sub
+
+    Private Function buscar(ByVal Lista As System.Windows.Forms.ListView, ByVal texto As String, ByVal tipo As Integer) As Integer
+
+        For Each elemento As System.Windows.Forms.ListViewItem In Lista.Items
+            If elemento.Text = texto And elemento.ImageIndex = tipo Then
+
+                Return elemento.Index
+
+            End If
+        Next
+        Return -1
+
+    End Function
+
+
+    Private Sub ListView1_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListView1.MouseDoubleClick
+        If Me.ListView1.SelectedItems.Item(0).ImageIndex = 0 Then
+            'usuario conecatdo
+            If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
+                Dim fmr3 As Form3 = New Form3()
+                fmr3.Show()
+                fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
+                fmr3.BackColor = Color.Azure
+                fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
+                fmr3.user.Text = fmr3.TextBox1.Text
+
+                'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
+                ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 0
+                'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
+            End If
+        Else
+            'usuario desconectado
+            If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
+                Dim fmr3 As Form3 = New Form3()
+                fmr3.Show()
+                fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
+                fmr3.BackColor = Color.Beige
+                fmr3.ForeColor = Color.Red
+                fmr3.Text = fmr3.TextBox1.Text & " ¡¡Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
+                fmr3.user.Text = fmr3.TextBox1.Text
+
+                'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
+                ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 0
+                'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
+            End If
+        End If
+
     End Sub
 End Class
