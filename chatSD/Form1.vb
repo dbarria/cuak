@@ -32,7 +32,23 @@ Public Class Form1
     End Sub
 
     Sub registrar_usuario(ByVal user As String, ByVal pass As String)
-
+        'Wait(2)
+        'flagvisible = 1
+        txtFlag.Text = 0
+        flagD = 0
+        contpre = 0
+        'Me.BackColor = Color.Azure
+        Me.ForeColor = Color.BlueViolet
+        'Label4.ForeColor = Color.Black
+        txtIP.Text = Form2.txtIP.Text
+        txtPuerto.Text = Form2.txtPuerto.Text
+        With WinSockCliente2
+            'Determino a donde se quiere conectar el usuario
+            .IPDelHost = txtIP.Text
+            .PuertoDelHost = txtPuerto.Text
+            'Me conecto
+            .Conectar()
+        End With
         WinSockCliente2.EnviarDatos("nadie" & ": /registro:" & user & ":" & pass & ":")
 
     End Sub
@@ -197,7 +213,8 @@ Public Class Form1
                                 'No agrego al propio usuario (al yo) a la tabla y listado de conectados.
                                 If user <> txtUsuario.Text Then
                                     ListBox2.Items.Add(user)
-                                    'ListView1.Items.Add()
+                                    ListView1.Items.Add(New System.Windows.Forms.ListViewItem(user, 0))
+
 
 
 
