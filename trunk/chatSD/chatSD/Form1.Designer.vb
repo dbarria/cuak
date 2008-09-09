@@ -20,6 +20,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtIP = New System.Windows.Forms.TextBox
         Me.txtPuerto = New System.Windows.Forms.TextBox
         Me.txtMsje = New System.Windows.Forms.TextBox
@@ -32,14 +33,28 @@ Partial Class Form1
         Me.txtFlag = New System.Windows.Forms.TextBox
         Me.Label1 = New System.Windows.Forms.Label
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.ListBox3 = New System.Windows.Forms.ListBox
         Me.Label2 = New System.Windows.Forms.Label
-        Me.Label3 = New System.Windows.Forms.Label
         Me.txtCola = New System.Windows.Forms.TextBox
         Me.txtUserCola = New System.Windows.Forms.TextBox
-        Me.GroupBox1.SuspendLayout()
+        Me.TabControl1 = New System.Windows.Forms.TabControl
+        Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.TabPage2 = New System.Windows.Forms.TabPage
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox
+        Me.LabelEstado = New System.Windows.Forms.Label
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox
+        Me.LabelContacto = New System.Windows.Forms.Label
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
+        Me.TabControl1.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIP
@@ -76,7 +91,7 @@ Partial Class Form1
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(254, 275)
+        Me.btnSalir.Location = New System.Drawing.Point(405, 483)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 23)
         Me.btnSalir.TabIndex = 15
@@ -98,11 +113,12 @@ Partial Class Form1
         '
         'ListBox2
         '
+        Me.ListBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(12, 31)
+        Me.ListBox2.Location = New System.Drawing.Point(40, 64)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(123, 121)
-        Me.ListBox2.TabIndex = 19
+        Me.ListBox2.Size = New System.Drawing.Size(179, 264)
+        Me.ListBox2.TabIndex = 0
         '
         'txtComando
         '
@@ -124,41 +140,33 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Label1.Location = New System.Drawing.Point(12, 15)
+        Me.Label1.Location = New System.Drawing.Point(325, 31)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(104, 13)
+        Me.Label1.Size = New System.Drawing.Size(122, 13)
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Lista de Conectados"
         '
         'MonthCalendar1
         '
-        Me.MonthCalendar1.Location = New System.Drawing.Point(6, 16)
+        Me.MonthCalendar1.Location = New System.Drawing.Point(15, 46)
         Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 24
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.ListBox1)
-        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
-        Me.GroupBox1.Location = New System.Drawing.Point(141, 15)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(188, 254)
-        Me.GroupBox1.TabIndex = 25
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.MonthCalendar1.TabIndex = 0
         '
         'ListBox1
         '
+        Me.ListBox1.BackColor = System.Drawing.SystemColors.Control
+        Me.ListBox1.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.ListBox1.ForeColor = System.Drawing.Color.DimGray
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(7, 179)
+        Me.ListBox1.Location = New System.Drawing.Point(15, 213)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(170, 69)
+        Me.ListBox1.Size = New System.Drawing.Size(420, 108)
         Me.ListBox1.TabIndex = 25
         '
         'ListBox3
         '
         Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(12, 177)
+        Me.ListBox3.Location = New System.Drawing.Point(324, 220)
         Me.ListBox3.Name = "ListBox3"
         Me.ListBox3.Size = New System.Drawing.Size(123, 121)
         Me.ListBox3.TabIndex = 26
@@ -167,20 +175,11 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Label2.Location = New System.Drawing.Point(12, 161)
+        Me.Label2.Location = New System.Drawing.Point(321, 200)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 13)
+        Me.Label2.Size = New System.Drawing.Size(143, 13)
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Lista de NO Conectados"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(193, 288)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(22, 13)
-        Me.Label3.TabIndex = 28
-        Me.Label3.Text = "v.6"
         '
         'txtCola
         '
@@ -198,33 +197,178 @@ Partial Class Form1
         Me.txtUserCola.TabIndex = 36
         Me.txtUserCola.Visible = False
         '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.TabControl1.ImageList = Me.ImageList1
+        Me.TabControl1.Location = New System.Drawing.Point(-3, 81)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.ShowToolTips = True
+        Me.TabControl1.Size = New System.Drawing.Size(537, 400)
+        Me.TabControl1.TabIndex = 0
+        '
+        'TabPage1
+        '
+        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.PictureBox2)
+        Me.TabPage1.Controls.Add(Me.LabelContacto)
+        Me.TabPage1.Controls.Add(Me.ListBox2)
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.ListBox3)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.ImageIndex = 0
+        Me.TabPage1.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(529, 373)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Contactos"
+        Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.ListBox1)
+        Me.TabPage2.Controls.Add(Me.MonthCalendar1)
+        Me.TabPage2.ImageIndex = 2
+        Me.TabPage2.Location = New System.Drawing.Point(4, 23)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(529, 373)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Planificación de Actividades"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "chatEstado.gif")
+        Me.ImageList1.Images.SetKeyName(1, "enviarEstadoi.gif")
+        Me.ImageList1.Images.SetKeyName(2, "agendaEstado.jpg")
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox3.Location = New System.Drawing.Point(2, 2)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 28)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 38
+        Me.PictureBox3.TabStop = False
+        '
+        'LabelEstado
+        '
+        Me.LabelEstado.BackColor = System.Drawing.Color.Transparent
+        Me.LabelEstado.Font = New System.Drawing.Font("Verdana", 9.25!, System.Drawing.FontStyle.Bold)
+        Me.LabelEstado.ForeColor = System.Drawing.Color.Transparent
+        Me.LabelEstado.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LabelEstado.Location = New System.Drawing.Point(300, 44)
+        Me.LabelEstado.Name = "LabelEstado"
+        Me.LabelEstado.Size = New System.Drawing.Size(97, 16)
+        Me.LabelEstado.TabIndex = 40
+        Me.LabelEstado.Text = "Usuario XXX"
+        Me.LabelEstado.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox6.Location = New System.Drawing.Point(493, 71)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(30, 28)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.PictureBox6.TabIndex = 41
+        Me.PictureBox6.TabStop = False
+        '
+        'LabelContacto
+        '
+        Me.LabelContacto.AutoSize = True
+        Me.LabelContacto.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.LabelContacto.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.LabelContacto.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LabelContacto.Location = New System.Drawing.Point(37, 35)
+        Me.LabelContacto.Name = "LabelContacto"
+        Me.LabelContacto.Size = New System.Drawing.Size(94, 13)
+        Me.LabelContacto.TabIndex = 28
+        Me.LabelContacto.Text = "Lista Contactos"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 29)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
+        Me.PictureBox2.TabIndex = 42
+        Me.PictureBox2.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LightYellow
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button1.Location = New System.Drawing.Point(236, 64)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(199, 23)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "&Iniciar Conversación"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LinkLabel1.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.LinkLabel1.Location = New System.Drawing.Point(425, 9)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(93, 14)
+        Me.LinkLabel1.TabIndex = 42
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Cerrar Sesión"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(342, 316)
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(526, 507)
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.LabelEstado)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.txtUserCola)
         Me.Controls.Add(Me.txtCola)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ListBox3)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtFlag)
         Me.Controls.Add(Me.txtComando)
-        Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.txtDatos)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.txtMsje)
         Me.Controls.Add(Me.txtPuerto)
         Me.Controls.Add(Me.txtIP)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.DoubleBuffered = True
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Loading.........."
         Me.TransparencyKey = System.Drawing.Color.Blue
-        Me.GroupBox1.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        Me.TabPage2.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -241,12 +385,21 @@ Partial Class Form1
     Friend WithEvents txtFlag As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents ListBox3 As System.Windows.Forms.ListBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents txtCola As System.Windows.Forms.TextBox
     Friend WithEvents txtUserCola As System.Windows.Forms.TextBox
+    Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
+    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents LabelEstado As System.Windows.Forms.Label
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents LabelContacto As System.Windows.Forms.Label
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 
 End Class
