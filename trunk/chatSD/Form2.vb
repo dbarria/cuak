@@ -118,8 +118,9 @@ Public Class Form2
         End If
 
         If estado = 1 Then
-            Timer2.Stop()
 
+            Timer2.Stop()
+            barraEstado.Text = ""
         End If
     End Sub
 End Class
