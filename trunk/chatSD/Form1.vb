@@ -485,12 +485,13 @@ Public Class Form1
                 'Dim fmr3 As Form3 = New Form3()
                 chatIHC.Show()
                 'fmr3.Show()
-                chatIHC.LabelContacto.Text = "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                chatIHC.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
+                'chatIHC.TextBox1.Text = Me.ListView1.SelectedItem.ToString
+                chatIHC.LabelContacto.Text = "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
-                chatIHC.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
                 'fmr3.BackColor = Color.Azure
                 'fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
-                chatIHC.Text = "Chat con " & Me.ListBox2.SelectedItem.ToString
+                chatIHC.Text = "Chat con " & chatIHC.TextBox1.Text
 
                 'fmr3.user.Text = fmr3.TextBox1.Text
                 chatIHC.LabelContacto.Text = chatIHC.TextBox1.Text
@@ -507,11 +508,12 @@ Public Class Form1
                 chatIHC.Show()
                 'fmr3.Show()
                 'fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
-                chatIHC.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
-                chatIHC.LabelContacto.Text = "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                chatIHC.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
+                'chatIHC.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
+                chatIHC.LabelContacto.Text = "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.BackColor = Color.Beige
                 'fmr3.ForeColor = Color.Red
-                chatIHC.Text = "Desconectado!! " & "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                chatIHC.Text = "Desconectado!! " & "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
                 'fmr3.user.Text = fmr3.TextBox1.Text
                 chatIHC.LabelContacto.Text = chatIHC.TextBox1.Text
