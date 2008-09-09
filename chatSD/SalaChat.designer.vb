@@ -23,6 +23,7 @@ Partial Class SalaChat
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalaChat))
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.TabConversacion1 = New System.Windows.Forms.TabPage
+        Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.LabelContacto = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
         Me.RichTextBox3 = New System.Windows.Forms.RichTextBox
@@ -64,6 +65,7 @@ Partial Class SalaChat
         '
         Me.TabConversacion1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.TabConversacion1.BackgroundImage = Global.chatSD.My.Resources.Resources.fondo2
+        Me.TabConversacion1.Controls.Add(Me.TextBox1)
         Me.TabConversacion1.Controls.Add(Me.LabelContacto)
         Me.TabConversacion1.Controls.Add(Me.Button1)
         Me.TabConversacion1.Controls.Add(Me.RichTextBox3)
@@ -77,6 +79,13 @@ Partial Class SalaChat
         Me.TabConversacion1.TabIndex = 0
         Me.TabConversacion1.Text = "Conversación 1"
         Me.TabConversacion1.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(289, 333)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(95, 21)
+        Me.TextBox1.TabIndex = 21
         '
         'LabelContacto
         '
@@ -321,4 +330,5 @@ Partial Class SalaChat
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class
