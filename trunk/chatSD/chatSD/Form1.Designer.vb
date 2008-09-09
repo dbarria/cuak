@@ -20,6 +20,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Usuario Online", 0)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Usuario Offline", 1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtIP = New System.Windows.Forms.TextBox
         Me.txtPuerto = New System.Windows.Forms.TextBox
@@ -49,6 +51,8 @@ Partial Class Form1
         Me.LabelEstado = New System.Windows.Forms.Label
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
+        Me.ListView1 = New System.Windows.Forms.ListView
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,6 +216,7 @@ Partial Class Form1
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.ListView1)
         Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.PictureBox2)
         Me.TabPage1.Controls.Add(Me.LabelContacto)
@@ -334,6 +339,27 @@ Partial Class Form1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Cerrar Sesión"
         '
+        'ListView1
+        '
+        Me.ListView1.Alignment = System.Windows.Forms.ListViewAlignment.Left
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
+        Me.ListView1.Location = New System.Drawing.Point(247, 93)
+        Me.ListView1.MultiSelect = False
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.ShowGroups = False
+        Me.ListView1.Size = New System.Drawing.Size(127, 97)
+        Me.ListView1.SmallImageList = Me.ImageList2
+        Me.ListView1.TabIndex = 44
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.List
+        '
+        'ImageList2
+        '
+        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList2.Images.SetKeyName(0, "conectar.gif")
+        Me.ImageList2.Images.SetKeyName(1, "noconectado.gif")
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -401,5 +427,7 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents LabelContacto As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents ListView1 As System.Windows.Forms.ListView
+    Friend WithEvents ImageList2 As System.Windows.Forms.ImageList
 
 End Class

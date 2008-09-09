@@ -197,6 +197,10 @@ Public Class Form1
                                 'No agrego al propio usuario (al yo) a la tabla y listado de conectados.
                                 If user <> txtUsuario.Text Then
                                     ListBox2.Items.Add(user)
+                                    'ListView1.Items.Add()
+
+
+
                                     ventanas.Add(user, "1")
                                 End If
                             Else
