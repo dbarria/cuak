@@ -38,4 +38,8 @@ Public Class Form4
         Me.Visible = False
         Form2.Visible = True
     End Sub
+
+    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class
