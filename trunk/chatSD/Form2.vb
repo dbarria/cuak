@@ -73,6 +73,9 @@ Public Class Form2
             estado = 1
             Me.Visible = False
             Form1.Visible = True
+            Form1.Timer2.Start()
+
+
         Else
             MsgBox("Ingresa el nombre de usuario")
         End If

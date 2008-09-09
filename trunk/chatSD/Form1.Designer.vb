@@ -20,8 +20,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Usuario Online", 0)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Usuario Offline", 1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtIP = New System.Windows.Forms.TextBox
         Me.txtPuerto = New System.Windows.Forms.TextBox
@@ -42,6 +40,8 @@ Partial Class Form1
         Me.txtUserCola = New System.Windows.Forms.TextBox
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.ListView1 = New System.Windows.Forms.ListView
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
         Me.Button1 = New System.Windows.Forms.Button
         Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.LabelContacto = New System.Windows.Forms.Label
@@ -51,8 +51,7 @@ Partial Class Form1
         Me.LabelEstado = New System.Windows.Forms.Label
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
-        Me.ListView1 = New System.Windows.Forms.ListView
-        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -119,10 +118,11 @@ Partial Class Form1
         '
         Me.ListBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(40, 64)
+        Me.ListBox2.Location = New System.Drawing.Point(344, 77)
         Me.ListBox2.Name = "ListBox2"
         Me.ListBox2.Size = New System.Drawing.Size(179, 264)
         Me.ListBox2.TabIndex = 0
+        Me.ListBox2.Visible = False
         '
         'txtComando
         '
@@ -170,20 +170,22 @@ Partial Class Form1
         'ListBox3
         '
         Me.ListBox3.FormattingEnabled = True
-        Me.ListBox3.Location = New System.Drawing.Point(324, 220)
+        Me.ListBox3.Location = New System.Drawing.Point(273, 249)
         Me.ListBox3.Name = "ListBox3"
         Me.ListBox3.Size = New System.Drawing.Size(123, 121)
         Me.ListBox3.TabIndex = 26
+        Me.ListBox3.Visible = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Label2.Location = New System.Drawing.Point(321, 200)
+        Me.Label2.Location = New System.Drawing.Point(282, 233)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(143, 13)
         Me.Label2.TabIndex = 27
         Me.Label2.Text = "Lista de NO Conectados"
+        Me.Label2.Visible = False
         '
         'txtCola
         '
@@ -232,6 +234,26 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Contactos"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'ListView1
+        '
+        Me.ListView1.Alignment = System.Windows.Forms.ListViewAlignment.Left
+        Me.ListView1.Location = New System.Drawing.Point(40, 64)
+        Me.ListView1.MultiSelect = False
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.ShowGroups = False
+        Me.ListView1.Size = New System.Drawing.Size(179, 264)
+        Me.ListView1.SmallImageList = Me.ImageList2
+        Me.ListView1.TabIndex = 44
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.List
+        '
+        'ImageList2
+        '
+        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList2.Images.SetKeyName(0, "conectar.gif")
+        Me.ImageList2.Images.SetKeyName(1, "noconectado.gif")
         '
         'Button1
         '
@@ -339,26 +361,9 @@ Partial Class Form1
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Cerrar Sesión"
         '
-        'ListView1
+        'Timer2
         '
-        Me.ListView1.Alignment = System.Windows.Forms.ListViewAlignment.Left
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2})
-        Me.ListView1.Location = New System.Drawing.Point(247, 93)
-        Me.ListView1.MultiSelect = False
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.ShowGroups = False
-        Me.ListView1.Size = New System.Drawing.Size(127, 97)
-        Me.ListView1.SmallImageList = Me.ImageList2
-        Me.ListView1.TabIndex = 44
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.List
-        '
-        'ImageList2
-        '
-        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
-        Me.ImageList2.Images.SetKeyName(0, "conectar.gif")
-        Me.ImageList2.Images.SetKeyName(1, "noconectado.gif")
+        Me.Timer2.Enabled = True
         '
         'Form1
         '
@@ -429,5 +434,6 @@ Partial Class Form1
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ImageList2 As System.Windows.Forms.ImageList
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 
 End Class
