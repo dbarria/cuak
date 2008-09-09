@@ -408,4 +408,39 @@ Public Class Form1
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
 
     End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Try
+
+            If ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 1 Then
+                Dim fmr3 As Form3 = New Form3()
+                fmr3.Show()
+                fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
+                fmr3.BackColor = Color.Azure
+                fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
+                fmr3.user.Text = fmr3.TextBox1.Text
+
+                'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
+                ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 0
+                'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
+            End If
+
+            If ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 1 Then
+                Dim fmr3 As Form3 = New Form3()
+                fmr3.Show()
+                fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
+                fmr3.BackColor = Color.Beige
+                fmr3.ForeColor = Color.Red
+                fmr3.Text = fmr3.TextBox1.Text & " ¡¡Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
+                fmr3.user.Text = fmr3.TextBox1.Text
+
+                'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
+                ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 0
+                'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
+            End If
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

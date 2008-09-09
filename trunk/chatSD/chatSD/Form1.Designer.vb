@@ -40,21 +40,21 @@ Partial Class Form1
         Me.txtUserCola = New System.Windows.Forms.TextBox
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.TabPage1 = New System.Windows.Forms.TabPage
+        Me.Button1 = New System.Windows.Forms.Button
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox
+        Me.LabelContacto = New System.Windows.Forms.Label
         Me.TabPage2 = New System.Windows.Forms.TabPage
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.LabelEstado = New System.Windows.Forms.Label
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
-        Me.LabelContacto = New System.Windows.Forms.Label
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.Button1 = New System.Windows.Forms.Button
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIP
@@ -228,6 +228,41 @@ Partial Class Form1
         Me.TabPage1.Text = "Contactos"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.LightYellow
+        Me.Button1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Button1.Location = New System.Drawing.Point(236, 64)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(199, 23)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "&Iniciar Conversación"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 29)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
+        Me.PictureBox2.TabIndex = 42
+        Me.PictureBox2.TabStop = False
+        '
+        'LabelContacto
+        '
+        Me.LabelContacto.AutoSize = True
+        Me.LabelContacto.Font = New System.Drawing.Font("Verdana", 8.25!)
+        Me.LabelContacto.ForeColor = System.Drawing.SystemColors.Desktop
+        Me.LabelContacto.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.LabelContacto.Location = New System.Drawing.Point(37, 35)
+        Me.LabelContacto.Name = "LabelContacto"
+        Me.LabelContacto.Size = New System.Drawing.Size(94, 13)
+        Me.LabelContacto.TabIndex = 28
+        Me.LabelContacto.Text = "Lista Contactos"
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.ListBox1)
@@ -286,41 +321,6 @@ Partial Class Form1
         Me.PictureBox6.TabIndex = 41
         Me.PictureBox6.TabStop = False
         '
-        'LabelContacto
-        '
-        Me.LabelContacto.AutoSize = True
-        Me.LabelContacto.Font = New System.Drawing.Font("Verdana", 8.25!)
-        Me.LabelContacto.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.LabelContacto.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LabelContacto.Location = New System.Drawing.Point(37, 35)
-        Me.LabelContacto.Name = "LabelContacto"
-        Me.LabelContacto.Size = New System.Drawing.Size(94, 13)
-        Me.LabelContacto.TabIndex = 28
-        Me.LabelContacto.Text = "Lista Contactos"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 29)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(20, 29)
-        Me.PictureBox2.TabIndex = 42
-        Me.PictureBox2.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.LightYellow
-        Me.Button1.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.Button1.ForeColor = System.Drawing.SystemColors.Desktop
-        Me.Button1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Button1.Location = New System.Drawing.Point(236, 64)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(199, 23)
-        Me.Button1.TabIndex = 43
-        Me.Button1.Text = "&Iniciar Conversación"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
@@ -365,10 +365,10 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
