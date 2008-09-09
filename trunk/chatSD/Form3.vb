@@ -177,4 +177,6 @@ Public Class Form3
         flagRescr = 0
         cont2 = 0
     End Sub
+
+
 End Class
