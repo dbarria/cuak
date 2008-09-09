@@ -51,7 +51,7 @@ Public Class Form1
         contpre = 0
         'Me.BackColor = Color.Azure
         Me.ForeColor = Color.BlueViolet
-        Label4.ForeColor = Color.Black
+        'Label4.ForeColor = Color.Black
         txtIP.Text = Form2.txtIP.Text
         txtPuerto.Text = Form2.txtPuerto.Text
         With WinSockCliente2

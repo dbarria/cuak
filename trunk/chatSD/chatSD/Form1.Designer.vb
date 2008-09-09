@@ -20,7 +20,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.txtIP = New System.Windows.Forms.TextBox
         Me.txtPuerto = New System.Windows.Forms.TextBox
         Me.txtMsje = New System.Windows.Forms.TextBox
@@ -38,14 +37,9 @@ Partial Class Form1
         Me.ListBox3 = New System.Windows.Forms.ListBox
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
-        Me.Label4 = New System.Windows.Forms.Label
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.txtCola = New System.Windows.Forms.TextBox
         Me.txtUserCola = New System.Windows.Forms.TextBox
         Me.GroupBox1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIP
@@ -188,33 +182,6 @@ Partial Class Form1
         Me.Label3.TabIndex = 28
         Me.Label3.Text = "v.6"
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(48, 141)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(259, 33)
-        Me.Label4.TabIndex = 34
-        Me.Label4.Text = "MSN -SD USACH"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(117, 52)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 107)
-        Me.PictureBox2.TabIndex = 33
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 15)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(317, 289)
-        Me.PictureBox1.TabIndex = 32
-        Me.PictureBox1.TabStop = False
-        '
         'txtCola
         '
         Me.txtCola.Location = New System.Drawing.Point(-87, 165)
@@ -238,9 +205,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(342, 316)
         Me.Controls.Add(Me.txtUserCola)
         Me.Controls.Add(Me.txtCola)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ListBox3)
@@ -261,8 +225,6 @@ Partial Class Form1
         Me.Text = "Loading.........."
         Me.TransparencyKey = System.Drawing.Color.Blue
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -284,9 +246,6 @@ Partial Class Form1
     Friend WithEvents ListBox3 As System.Windows.Forms.ListBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents txtCola As System.Windows.Forms.TextBox
     Friend WithEvents txtUserCola As System.Windows.Forms.TextBox
 

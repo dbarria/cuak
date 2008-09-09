@@ -48,9 +48,9 @@ Public Class Form2
         End If
         If flagvisible = 1 And contp = 30 Then
             'Form5.Show()
-            Form1.PictureBox1.Visible = False
-            Form1.PictureBox2.Visible = False
-            Form1.Label4.Visible = False
+            'Form1.PictureBox1.Visible = False
+            'Form1.PictureBox2.Visible = False
+            'Form1.Label4.Visible = False
             Form1.Visible = False
 
             txtUsuario.Focus()
