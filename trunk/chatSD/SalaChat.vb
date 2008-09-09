@@ -19,42 +19,8 @@ Public Class SalaChat
             Application.DoEvents()
         End While
     End Sub
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        IngresoContacto.ShowDialog()
+    
 
-        If IngresoContacto.elegido = 0 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Edmundo Leiva a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 1 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Rodrigo Morales a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 2 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Patricio Castro a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 3 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Roberto Vargas a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 4 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Daniel Barria a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 5 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Cristian Muñoz a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 6 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Francia Jimenez a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 7 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Claudio Sanhueza a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 8 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Isaias Gonzalez a la Conversacion"
-        End If
-        If IngresoContacto.elegido = 9 Then
-            RichTextBox1.Text = RichTextBox1.Text + "   Se agrego Sebastian Maldonado a la Conversacion"
-        End If
-
-
-    End Sub
 
     'Private Sub Button2_MouseClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button2.MouseClick
 
@@ -121,14 +87,30 @@ Public Class SalaChat
 
     Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If (CerrarSistema.ShowDialog() = System.Windows.Forms.DialogResult.OK) Then
-            Dim Log As IHC.Login = New Login
-            Log.Show()
+            Form1.ventanas.Item(LabelContacto.Text) = 1
+            Form1.WindowState = FormWindowState.Normal
             Me.Close()
         End If
     End Sub
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Form1.WindowState = FormWindowState.Minimized
+        If RichTextBox3.Text <> "" Then
+            'Envio lo que esta escrito en la caja de texto del mensaje
+            Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
+            'Añado el msje enviado a mi ventana
+            RichTextBox1.Text = RichTextBox1.Text & "\n" & "Yo: " & RichTextBox3.Text
+            'ListBox1.Items.Add("Yo: " & txtMsje.Text)
+            'limpio la caja
+            RichTextBox3.Text = ""
+            RichTextBox1.Focus()
+            SendKeys.SendWait("{DOWN}")
+            'SendKeys.Send("{DOWN}")
+            RichTextBox3.Focus()
+        End If
 
+
+        RichTextBox3.Focus()
     End Sub
 
     Private Sub LabelContacto_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LabelContacto.Click
@@ -143,5 +125,124 @@ Public Class SalaChat
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
 
+
+        'En caso de que existan mensajes en cola para el usuario, procedo a mostrarlos
+        If Form1.txtUserCola.Text = TextBox1.Text Then
+            Dim i As Integer
+            Dim mensaje As String
+
+            '-----------este segmento de código arregla los mensajes en cola y los añade a la venta
+            'agregando la palabra "(Antes)" al final de cada mensaje
+            datos = Form1.txtCola.Text
+            po = datos.IndexOf(":")
+            cantidad = datos.Substring(0, po)
+            indice = po + 1
+            datos = datos.Substring(indice, datos.Length - indice)
+            For i = 1 To cantidad
+                po = datos.IndexOf(":")
+                mensaje = datos.Substring(0, po)
+                indice = po + 1
+                datos = datos.Substring(indice, datos.Length - indice)
+                po = datos.IndexOf(":")
+                indice = po + 1
+                datos = datos.Substring(indice, datos.Length - indice)
+                po = datos.IndexOf(":")
+                mensaje = mensaje & " :" & datos.Substring(0, po) & " (Antes)"
+                indice = po + 1
+                datos = datos.Substring(indice, datos.Length - indice)
+                RichTextBox1.Text = RichTextBox1.Text & "\n" & mensaje
+                'ListBox1.Items.Add(mensaje)
+            Next
+            Form1.txtUserCola.Text = ""
+        End If
+
+        'Acá se agregan mensajes enviados por usuarios. se utiliza un textBox en form1 como flag
+        ' para avisar si existenuevo mensaje para una ventana especifica
+        If Form1.txtFlag.Text = 1 Then
+            If Form1.txtComando.Text = TextBox1.Text Then
+                po = Form1.txtDatos.Text.IndexOf(":")
+                po = po + 1
+                temp = Form1.txtDatos.Text
+                temp = temp.Substring(po, temp.Length - po)
+
+                po = temp.IndexOf(":")
+                po = po + 1
+                temp = temp.Substring(po, temp.Length - po)
+
+                If temp = " ::::estoy_escribiendo::::" Then
+                    If cont = 0 Then
+                        barraEstado.Text = "Esta escribiendo"
+                        flagRescr = 1
+                    End If
+                Else
+
+
+                    temp = TextBox1.Text & ":" & temp
+                    RichTextBox1.Text = RichTextBox1.Text & "\n" & temp
+                    'ListBox1.Items.Add(temp)
+
+                End If
+                Form1.txtFlag.Text = 0
+            End If
+        End If
+
+
+
+        If flagRescr = 1 Then
+            If cont2 = 0 Then
+                'Form1.enviar_mensaje(TextBox1.Text, "::::estoy_escribiendo::::")
+                'TextBox2.Text = "escribiendo"
+            End If
+            cont2 = cont2 + 1
+        End If
+
+        If cont2 = 23 Then
+            flagRescr = 0
+            'TextBox2.Text = ""
+            barraEstado.Text = "Conversación iniciada"
+            cont2 = 0
+        End If
+
+
+
+
+        If flagescr = 1 Then
+            If cont = 0 Then
+                Form1.enviar_mensaje(TextBox1.Text, "::::estoy_escribiendo::::")
+                'TextBox2.Text = "escribiendo"
+            End If
+            cont = cont + 1
+        End If
+
+        If cont = 23 Then
+            flagescr = 0
+            'TextBox2.Text = ""
+            cont = 0
+        End If
     End Sub
+
+    Private Sub RichTextBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles RichTextBox3.KeyPress
+        Form1.WindowState = FormWindowState.Minimized
+        If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
+
+            If RichTextBox3.Text <> "" Then
+                'Envio lo que esta escrito en la caja de texto del mensaje
+                Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
+                'Añado el msje enviado a mi ventana
+                RichTextBox1.Text = RichTextBox1.Text & "\n" & "Yo: " & RichTextBox3.Text
+                'ListBox1.Items.Add("Yo: " & txtMsje.Text)
+                'limpio la caja
+                RichTextBox3.Text = ""
+                RichTextBox1.Focus()
+                SendKeys.SendWait("{DOWN}")
+                'SendKeys.Send("{DOWN}")
+                RichTextBox3.Focus()
+            End If
+            RichTextBox3.Focus()
+        End If
+
+        flagescr = 1
+
+    End Sub
+
 End Class
