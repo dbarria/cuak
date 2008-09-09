@@ -374,7 +374,7 @@ Public Class Form1
 
         'Envio lo que esta escrito en la caja de texto del mensaje
         WinSockCliente2.EnviarDatos(txtUsuario.Text & ":" & UsuarioB & ": " & msje)
-        'Añado el msje enviado a mi ventana
+        'Aado el msje enviado a mi ventana
 
     End Sub
 
@@ -382,26 +382,42 @@ Public Class Form1
 
         'Envio lo que esta escrito en la caja de texto del mensaje
         'WinSockCliente2.EnviarDatos(txtUsuario.Text & ":/escr:" & UsuarioB & ": " & msje)
-        'Añado el msje enviado a mi ventana
+        'Aado el msje enviado a mi ventana
 
     End Sub
 
 
     Private Sub ListBox2_MouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListBox2.MouseDoubleClick
         Try
-
             If ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 1 Then
-                Dim fmr3 As Form3 = New Form3()
-                fmr3.Show()
-                fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
-                fmr3.BackColor = Color.Azure
-                fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
-                fmr3.user.Text = fmr3.TextBox1.Text
+                Dim chatIHC As SalaChat = New SalaChat()
+                'Dim fmr3 As Form3 = New Form3()
+                chatIHC.Show()
+                'fmr3.Show()
+                chatIHC.LabelContacto.Text = "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                'fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
+                'fmr3.BackColor = Color.Azure
+                'fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
+                chatIHC.Text = "Chat con " & Me.ListBox2.SelectedItem.ToString
+
+                'fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
                 ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 0
                 'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
             End If
+            'If ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 1 Then
+            '    Dim fmr3 As Form3 = New Form3()
+            '    fmr3.Show()
+            '    fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
+            '    fmr3.BackColor = Color.Azure
+            '    fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
+            '    fmr3.user.Text = fmr3.TextBox1.Text
+
+            '    'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
+            '    ventanas.Item(Me.ListBox2.SelectedItem.ToString) = 0
+            '    'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
+            'End If
 
         Catch ex As Exception
 
@@ -414,20 +430,36 @@ Public Class Form1
 
     Private Sub ListBox3_MouseDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles ListBox3.MouseDoubleClick
         Try
-
             If ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 1 Then
-                Dim fmr3 As Form3 = New Form3()
-                fmr3.Show()
-                fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
-                fmr3.BackColor = Color.Beige
-                fmr3.ForeColor = Color.Red
-                fmr3.Text = fmr3.TextBox1.Text & " ¡¡Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
-                fmr3.user.Text = fmr3.TextBox1.Text
+                Dim chatIHC As SalaChat = New SalaChat()
+                'Dim fmr3 As Form3 = New Form3()
+                chatIHC.Show()
+                'fmr3.Show()
+                'fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
+                chatIHC.LabelContacto.Text = "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                'fmr3.BackColor = Color.Beige
+                'fmr3.ForeColor = Color.Red
+                chatIHC.Text = "Desconectado!! " & "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                'fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
+                'fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
                 ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 0
                 'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
             End If
+            'If ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 1 Then
+            '    Dim fmr3 As Form3 = New Form3()
+            '    fmr3.Show()
+            '    fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
+            '    fmr3.BackColor = Color.Beige
+            '    fmr3.ForeColor = Color.Red
+            '    fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
+            '    fmr3.user.Text = fmr3.TextBox1.Text
+
+            '    'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
+            '    ventanas.Item(Me.ListBox3.SelectedItem.ToString) = 0
+            '    'ventanas.Remove(Me.ListBox2.SelectedItem.ToString)
+            'End If
 
         Catch ex As Exception
 
@@ -445,12 +477,17 @@ Public Class Form1
         If Me.ListView1.SelectedItems.Item(0).ImageIndex = 0 Then
             'usuario conecatdo
             If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
-                Dim fmr3 As Form3 = New Form3()
-                fmr3.Show()
-                fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
-                fmr3.BackColor = Color.Azure
-                fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
-                fmr3.user.Text = fmr3.TextBox1.Text
+                Dim chatIHC As SalaChat = New SalaChat()
+                'Dim fmr3 As Form3 = New Form3()
+                chatIHC.Show()
+                'fmr3.Show()
+                chatIHC.LabelContacto.Text = "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                'fmr3.TextBox1.Text = Me.ListBox2.SelectedItem.ToString
+                'fmr3.BackColor = Color.Azure
+                'fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
+                chatIHC.Text = "Chat con " & Me.ListBox2.SelectedItem.ToString
+
+                'fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
                 ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 0
@@ -459,13 +496,17 @@ Public Class Form1
         Else
             'usuario desconectado
             If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
-                Dim fmr3 As Form3 = New Form3()
-                fmr3.Show()
-                fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
-                fmr3.BackColor = Color.Beige
-                fmr3.ForeColor = Color.Red
-                fmr3.Text = fmr3.TextBox1.Text & " ¡¡Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
-                fmr3.user.Text = fmr3.TextBox1.Text
+                Dim chatIHC As SalaChat = New SalaChat()
+                'Dim fmr3 As Form3 = New Form3()
+                chatIHC.Show()
+                'fmr3.Show()
+                'fmr3.TextBox1.Text = Me.ListBox3.SelectedItem.ToString
+                chatIHC.LabelContacto.Text = "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                'fmr3.BackColor = Color.Beige
+                'fmr3.ForeColor = Color.Red
+                chatIHC.Text = "Desconectado!! " & "Conversando con " & Me.ListBox2.SelectedItem.ToString
+                'fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
+                'fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
                 ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 0
@@ -490,12 +531,12 @@ Public Class Form1
                 'entonces el usuario existe como conectado en mi lista
             Else
 
-                'entonces el usuario conectado no está en mi lista
+                'entonces el usuario conectado no est en mi lista
                 indiceItem = buscar(ListView1, s, 1)
                 If indiceItem > -1 Then
 
 
-                    'el usuario está como no conectado en mi lista, lo cambio a conectado
+                    'el usuario est como no conectado en mi lista, lo cambio a conectado
 
                     ListView1.Items.Item(indiceItem).ImageIndex = 0
 
@@ -507,7 +548,7 @@ Public Class Form1
 
 
                 Else
-                    'el usuario  no está como no conectado, debo agregarlo como conectado
+                    'el usuario  no est como no conectado, debo agregarlo como conectado
                     ListViewItemTemp = New System.Windows.Forms.ListViewItem(s, 0)
                     ListView1.Items.Add(ListViewItemTemp)
                 End If
@@ -533,12 +574,12 @@ Public Class Form1
                 'entonces el usuario existe como no conectado en mi lista
             Else
 
-                'entonces el usuario no conectado no está en mi lista
+                'entonces el usuario no conectado no est en mi lista
                 indiceItem = buscar(ListView1, s, 0)
                 If indiceItem > -1 Then
 
 
-                    'el usuario está como  conectado en mi lista, lo cambio a no conectado
+                    'el usuario est como  conectado en mi lista, lo cambio a no conectado
 
                     'ListView1.Items.RemoveAt(indiceItem)
 
@@ -548,7 +589,7 @@ Public Class Form1
                     ListView1.Items.Item(indiceItem).ImageIndex = 1
 
                 Else
-                    'el usuario  no está como conectado, debo agregarlo como no conectado
+                    'el usuario  no est como conectado, debo agregarlo como no conectado
                     ListViewItemTemp = New System.Windows.Forms.ListViewItem(s, 1)
                     ListView1.Items.Add(ListViewItemTemp)
                 End If
@@ -604,7 +645,7 @@ Public Class Form1
                 fmr3.TextBox1.Text = Me.ListView1.SelectedItems.Item(0).Text
                 fmr3.BackColor = Color.Beige
                 fmr3.ForeColor = Color.Red
-                fmr3.Text = fmr3.TextBox1.Text & " ¡¡Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
+                fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
                 fmr3.user.Text = fmr3.TextBox1.Text
 
                 'Si existe una ventana en uso para un usuario, asigno un 0 a ese usuario en la tablaH
