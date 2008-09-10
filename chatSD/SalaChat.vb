@@ -240,10 +240,20 @@ Public Class SalaChat
         If e.KeyChar = Microsoft.VisualBasic.Chr(13) Then
 
             If RichTextBox3.Text <> "" Then
+                Dim inicio As Integer
+                Dim fin As Integer
+
                 'Envio lo que esta escrito en la caja de texto del mensaje
                 Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
                 'Añado el msje enviado a mi ventana
+                inicio = RichTextBox1.TextLength
+
                 RichTextBox1.Text = RichTextBox1.Text & vbNewLine & "Yo: " & RichTextBox3.Text
+
+                fin = RichTextBox1.TextLength
+                RichTextBox1.SelectionStart = inicio
+                RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+                RichTextBox1.SelectionColor = Color.Red
                 'ListBox1.Items.Add("Yo: " & txtMsje.Text)
                 'limpio la caja
                 RichTextBox3.Text = ""
