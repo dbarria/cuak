@@ -22,7 +22,7 @@
 	3.4 Barra de Estado: "Usuario está escribiendo..." OK
 	3.5 Barra de Estado: ""[17:45] Usuario se ha conectado""
 	3.6 Verificar camino de tabs y enters
-	3.7 Access Keys
+	3.7 Access Keys OK
 	
 4 Instalador
 	4.1 Instalador para programa cliente
