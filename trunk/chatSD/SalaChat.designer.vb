@@ -23,6 +23,7 @@ Partial Class SalaChat
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SalaChat))
         Me.TabControl1 = New System.Windows.Forms.TabControl
         Me.TabConversacion1 = New System.Windows.Forms.TabPage
+        Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.TextBox1 = New System.Windows.Forms.TextBox
         Me.LabelContacto = New System.Windows.Forms.Label
         Me.Button1 = New System.Windows.Forms.Button
@@ -42,7 +43,6 @@ Partial Class SalaChat
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.TabControl1.SuspendLayout()
         Me.TabConversacion1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -67,6 +67,7 @@ Partial Class SalaChat
         '
         Me.TabConversacion1.BackColor = System.Drawing.Color.FromArgb(CType(CType(50, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(50, Byte), Integer))
         Me.TabConversacion1.BackgroundImage = Global.chatSD.My.Resources.Resources.fondo2
+        Me.TabConversacion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabConversacion1.Controls.Add(Me.ListBox1)
         Me.TabConversacion1.Controls.Add(Me.TextBox1)
         Me.TabConversacion1.Controls.Add(Me.LabelContacto)
@@ -82,6 +83,15 @@ Partial Class SalaChat
         Me.TabConversacion1.TabIndex = 0
         Me.TabConversacion1.Text = "Conversación 1"
         Me.TabConversacion1.UseVisualStyleBackColor = True
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(286, 26)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(120, 95)
+        Me.ListBox1.TabIndex = 22
+        Me.ListBox1.Visible = False
         '
         'TextBox1
         '
@@ -286,15 +296,6 @@ Partial Class SalaChat
         '
         'Timer2
         '
-        '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(286, 26)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 95)
-        Me.ListBox1.TabIndex = 22
-        Me.ListBox1.Visible = False
         '
         'SalaChat
         '
