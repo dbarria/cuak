@@ -328,14 +328,17 @@ Public Class SalaChat
     End Sub
 
     Private Function buscar(ByVal Lista As System.Windows.Forms.ListBox, ByVal texto As String, ByVal tipo As Integer) As Integer
+        Dim s As String
+        Dim i As Integer
+        i = 1
 
-        For Each elemento As System.Windows.Forms.ListBox In Lista.Items
-            If elemento.Text = texto Then
+        For Each s In Lista.Items
+            If s = texto Then
 
-                Return elemento.TabIndex
-
-
+                Return i
             End If
+            i = i + 1
+
         Next
         Return -1
 
