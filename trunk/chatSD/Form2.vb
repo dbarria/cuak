@@ -66,7 +66,7 @@ Public Class Form2
     End Sub
 
     Private Sub btnConectar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConectar.Click
-        If txtUsuario.Text <> "" Then
+        If txtUsuario.Text <> "" And txtClave.Text <> "" Then
 
 
             barraEstado.Text = "Iniciando Sesión"
@@ -81,8 +81,16 @@ Public Class Form2
             escribirAutocompleteUsuario(txtUsuario.Text)
 
         Else
-            MsgBox("Ingresa el nombre de usuario")
-        End If
+
+            If txtUsuario.Text <> "" Then
+                FaltaContraseña.ShowDialog()
+            Else
+
+                FaltaCuentaUsuario.ShowDialog()
+            End If
+
+
+            End If
     End Sub
 
     Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -100,13 +108,17 @@ Public Class Form2
 
     Private Sub PictureBox3_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
         Dim id As Integer
-        Try
-            Dim proceso As System.Diagnostics.Process
-            id = Process.GetCurrentProcess.Id
-            proceso = Process.GetProcessById(id)
-            proceso.Kill()
-        Catch ex As Exception
-        End Try
+
+        If (CerrarSistema.ShowDialog() = System.Windows.Forms.DialogResult.OK) Then
+            Try
+
+                Dim proceso As System.Diagnostics.Process
+                id = Process.GetCurrentProcess.Id
+                proceso = Process.GetProcessById(id)
+                proceso.Kill()
+            Catch ex As Exception
+            End Try
+        End If
     End Sub
 
     Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
