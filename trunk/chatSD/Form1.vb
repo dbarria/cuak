@@ -550,7 +550,7 @@ Public Class Form1
                 chatIHC.LabelContacto.Text = "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.BackColor = Color.Beige
                 'fmr3.ForeColor = Color.Red
-                chatIHC.RichTextBox1.Text = "Los mensajes seran entregados la proxima vez que el usuario se conecte."
+                chatIHC.RichTextBox1.Text = "Los mensajes seran entregados la proxima vez que el usuario se conecte." & vbNewLine
                 chatIHC.Text = "Desconectado!! " & "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
                 'fmr3.user.Text = fmr3.TextBox1.Text
