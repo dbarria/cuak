@@ -31,7 +31,6 @@ Partial Class Form1
         Me.ListBox2 = New System.Windows.Forms.ListBox
         Me.txtComando = New System.Windows.Forms.TextBox
         Me.txtFlag = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
         Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar
         Me.ListBox1 = New System.Windows.Forms.ListBox
         Me.ListBox3 = New System.Windows.Forms.ListBox
@@ -140,16 +139,6 @@ Partial Class Form1
         Me.txtFlag.TabIndex = 22
         Me.txtFlag.Visible = False
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.DarkBlue
-        Me.Label1.Location = New System.Drawing.Point(325, 31)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(122, 13)
-        Me.Label1.TabIndex = 23
-        Me.Label1.Text = "Lista de Conectados"
-        '
         'MonthCalendar1
         '
         Me.MonthCalendar1.Location = New System.Drawing.Point(15, 46)
@@ -223,7 +212,6 @@ Partial Class Form1
         Me.TabPage1.Controls.Add(Me.PictureBox2)
         Me.TabPage1.Controls.Add(Me.LabelContacto)
         Me.TabPage1.Controls.Add(Me.ListBox2)
-        Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.ListBox3)
         Me.TabPage1.Controls.Add(Me.Label2)
         Me.TabPage1.ImageIndex = 0
@@ -414,7 +402,6 @@ Partial Class Form1
     Friend WithEvents ListBox2 As System.Windows.Forms.ListBox
     Friend WithEvents txtComando As System.Windows.Forms.TextBox
     Friend WithEvents txtFlag As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents MonthCalendar1 As System.Windows.Forms.MonthCalendar
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents ListBox3 As System.Windows.Forms.ListBox

@@ -720,4 +720,20 @@ Public Class Form1
     End Sub
 
 
+    Private Sub PictureBox6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox6.Click
+        Process.Start("c:\Windows\hh.exe", ".\Ayuda.chm::/Bienvenida.htm")
+    End Sub
+
+    Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
+        If (CerrarSistema.ShowDialog() = System.Windows.Forms.DialogResult.OK) Then
+            Try
+
+                Dim proceso As System.Diagnostics.Process
+                id = Process.GetCurrentProcess.Id
+                proceso = Process.GetProcessById(id)
+                proceso.Kill()
+            Catch ex As Exception
+            End Try
+        End If
+    End Sub
 End Class
