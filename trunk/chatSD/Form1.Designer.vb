@@ -25,7 +25,6 @@ Partial Class Form1
         Me.txtPuerto = New System.Windows.Forms.TextBox
         Me.txtMsje = New System.Windows.Forms.TextBox
         Me.txtUsuario = New System.Windows.Forms.TextBox
-        Me.btnSalir = New System.Windows.Forms.Button
         Me.txtDatos = New System.Windows.Forms.TextBox
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.ListBox2 = New System.Windows.Forms.ListBox
@@ -90,15 +89,6 @@ Partial Class Form1
         Me.txtUsuario.Size = New System.Drawing.Size(10, 20)
         Me.txtUsuario.TabIndex = 13
         Me.txtUsuario.Visible = False
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(405, 483)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalir.TabIndex = 15
-        Me.btnSalir.Text = "&Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
         '
         'txtDatos
         '
@@ -370,7 +360,6 @@ Partial Class Form1
         Me.Controls.Add(Me.txtFlag)
         Me.Controls.Add(Me.txtComando)
         Me.Controls.Add(Me.txtDatos)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.txtMsje)
         Me.Controls.Add(Me.txtPuerto)
@@ -397,7 +386,6 @@ Partial Class Form1
     Friend WithEvents txtPuerto As System.Windows.Forms.TextBox
     Friend WithEvents txtMsje As System.Windows.Forms.TextBox
     Friend WithEvents txtUsuario As System.Windows.Forms.TextBox
-    Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents txtDatos As System.Windows.Forms.TextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents ListBox2 As System.Windows.Forms.ListBox

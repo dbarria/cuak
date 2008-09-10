@@ -135,7 +135,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim id As Integer
         Try
             Dim proceso As System.Diagnostics.Process
@@ -205,8 +205,8 @@ Public Class Form1
                 Case "/regisNo"
                     If Form4.TextBox1.Text <> "" Then
                         MsgBox("Registro con exito")
-                        Form2.Visible = True
-                        Form4.Visible = False
+                        'Form2.Visible = True
+                        'Form4.Visible = False
                     End If
 
                     ' Se conecto nuevo usuario
