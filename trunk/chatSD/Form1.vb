@@ -349,23 +349,28 @@ Public Class Form1
         ' y = ventanas.Item(txtDatos.Text.Substring(0, po))
         If ventanas.Item(txtDatos.Text.Substring(0, po)) = 1 Then
             'If ventanas.Contains((txtDatos.Text.Substring(0, po))) = True Then
-            Dim fmr3 As Form3 = New Form3()
-            fmr3.Show()
+            'Dim fmr3 As Form3 = New Form3()
+            Dim chatIHC As SalaChat = New SalaChat()
+            'fmr3.Show()
+            chatIHC.Show()
 
             'agrego el nombre de usuario a la ventana
-            fmr3.TextBox1.Text = txtDatos.Text.Substring(0, po)
-            fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
-            fmr3.user.Text = fmr3.TextBox1.Text
+            chatIHC.TextBox1.Text = txtDatos.Text.Substring(0, po)
+            'fmr3.TextBox1.Text = txtDatos.Text.Substring(0, po)
+            chatIHC.Text = chatIHC.TextBox1.Text & " (Chat con " & chatIHC.TextBox1.Text & ")"
+            'fmr3.Text = fmr3.TextBox1.Text & " (Chat con " & fmr3.TextBox1.Text & ")"
+            chatIHC.LabelContacto.Text = chatIHC.TextBox1.Text
+            'fmr3.user.Text = fmr3.TextBox1.Text
 
             'Agrego un 0 en la tablaH para avisar que ya existe una ventana abierta
             ventanas.Item(txtDatos.Text.Substring(0, po)) = 0
-            If ListBox2.Items.Contains(txtDatos.Text.Substring(0, po)) Then
-                fmr3.BackColor = Color.Azure
-            End If
-            If ListBox3.Items.Contains(txtDatos.Text.Substring(0, po)) Then
-                fmr3.BackColor = Color.Beige
-                fmr3.ForeColor = Color.Red
-            End If
+            'If ListBox2.Items.Contains(txtDatos.Text.Substring(0, po)) Then
+            '    fmr3.BackColor = Color.Azure
+            'End If
+            'If ListBox3.Items.Contains(txtDatos.Text.Substring(0, po)) Then
+            '    fmr3.BackColor = Color.Beige
+            '    fmr3.ForeColor = Color.Red
+            'End If
             'ventanas.Remove(txtDatos.Text.Substring(0, po))
         End If
 
@@ -513,6 +518,7 @@ Public Class Form1
                 chatIHC.LabelContacto.Text = "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.BackColor = Color.Beige
                 'fmr3.ForeColor = Color.Red
+                chatIHC.RichTextBox1.Text = "Los mensajes seran entregados la proxima vez que el usuario se conecte."
                 chatIHC.Text = "Desconectado!! " & "Conversando con " & chatIHC.TextBox1.Text
                 'fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
                 'fmr3.user.Text = fmr3.TextBox1.Text
@@ -669,6 +675,7 @@ Public Class Form1
                 'fmr3.BackColor = Color.Beige
                 'fmr3.ForeColor = Color.Red
                 chatIHC.Text = "Desconectado!! " & "Conversando con " & chatIHC.TextBox1.Text
+                chatIHC.RichTextBox1.Text = "Los mensajes seran entregados la proxima vez que el usuario se conecte."
                 'fmr3.Text = fmr3.TextBox1.Text & " Desconectado!!" & " (Chat con " & fmr3.TextBox1.Text & ")"
                 'fmr3.user.Text = fmr3.TextBox1.Text
                 chatIHC.LabelContacto.Text = chatIHC.TextBox1.Text
