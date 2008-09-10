@@ -1,3 +1,6 @@
+Imports System.Xml
+
+
 Public Class Form2
     Inherits System.Windows.Forms.Form
 
@@ -30,6 +33,7 @@ Public Class Form2
         conf.config()
         txtIP.Text = conf.ip
         txtPuerto.Text = conf.port
+        LectorAutocompleteUsuarios()
 
     End Sub
 
@@ -74,7 +78,7 @@ Public Class Form2
             Me.Visible = False
             Form1.Visible = True
             Form1.Timer2.Start()
-
+            escribirAutocompleteUsuario(txtUsuario.Text)
 
         Else
             MsgBox("Ingresa el nombre de usuario")
@@ -123,4 +127,73 @@ Public Class Form2
             barraEstado.Text = ""
         End If
     End Sub
+
+    Sub escribirAutocompleteUsuario(ByVal usuarioTxt As String)
+        Dim xmlDocument As XmlDocument = New XmlDocument()
+
+        Dim data As XmlElement
+
+
+
+
+        xmlDocument.Load("autocomplete.xml")
+
+        If buscarUsuarioAutocomplete(usuarioTxt, xmlDocument) = True Then
+
+
+        Else
+            data = xmlDocument.CreateElement("usuario")
+            data.InnerText = usuarioTxt
+            xmlDocument.DocumentElement.AppendChild(data)
+            xmlDocument.Save("autocomplete.xml")
+
+
+        End If
+
+
+    End Sub
+
+    Function buscarUsuarioAutocomplete(ByVal userTXT as String, ByVal documento As XmlDocument) As Boolean
+        For Each nodo As XmlNode In documento.DocumentElement.ChildNodes
+
+            If nodo.InnerText = userTXT Then
+                Return True
+            End If
+
+        Next
+        Return False
+
+    End Function
+
+    Sub LectorAutocompleteUsuarios()
+        'Dim xml As Xml.XmlText
+        Dim reader As XmlTextReader
+        Dim usuarioLeido As String
+
+
+        'Creamos el XML Reader
+        reader = New XmlTextReader("autocomplete.xml")
+
+        'Desabilitamos las lineas en blanco,
+        'ya no las necesitamos
+        reader.WhitespaceHandling = WhitespaceHandling.None
+
+        Do While (reader.Read())
+           
+
+
+
+            'Mostrar nombre y valor del atributo.
+            If reader.Name = "usuario" Then
+                usuarioLeido = reader.ReadString()
+                txtUsuario.AutoCompleteCustomSource.Add(usuarioLeido)
+            End If
+
+
+        Loop
+
+        reader.Close()
+
+    End Sub
+
 End Class

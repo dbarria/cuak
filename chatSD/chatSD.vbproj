@@ -153,6 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\pics\Beaver.bmp" />
+    <Content Include="bin\Debug\autocomplete.xml" />
     <Content Include="bin\Debug\ip_port.xml" />
     <Content Include="Changelog.txt" />
     <Content Include="controladorChat.dll" />
