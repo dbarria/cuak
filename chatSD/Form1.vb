@@ -725,6 +725,7 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
+        Dim id As Integer
         If (CerrarSistema.ShowDialog() = System.Windows.Forms.DialogResult.OK) Then
             Try
 
