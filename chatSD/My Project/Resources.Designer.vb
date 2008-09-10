@@ -60,9 +60,37 @@ Namespace My.Resources
             End Set
         End Property
         
+        Friend ReadOnly Property agregar() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("agregar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property Beaver() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Beaver", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property chatEstado1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("chatEstado1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property exit2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("exit2", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property fondo2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fondo2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
