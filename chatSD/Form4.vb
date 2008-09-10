@@ -46,4 +46,26 @@ Public Class Form4
     Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
+
+    Private Sub Button1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If TextBox1.Text <> "" And TextBox2.Text <> "" Then
+
+            Form1.registrar_usuario(TextBox1.Text, TextBox2.Text)
+
+        Else
+            MsgBox("Ingresa los datos")
+            TextBox1.Focus()
+        End If
+    End Sub
+
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        If Form2.estado = 1 Then
+            Form1.quieroCerrarSesion = 1
+            Form1.desconectar()
+            Form2.estado = 0
+        End If
+
+        Me.Visible = False
+        Form2.Visible = True
+    End Sub
 End Class

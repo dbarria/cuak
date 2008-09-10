@@ -254,7 +254,7 @@ Partial Class Form2
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LinkLabel1.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.LinkLabel1.Location = New System.Drawing.Point(147, 526)
+        Me.LinkLabel1.Location = New System.Drawing.Point(141, 526)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(160, 14)
         Me.LinkLabel1.TabIndex = 41
