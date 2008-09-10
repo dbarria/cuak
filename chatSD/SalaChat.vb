@@ -99,7 +99,7 @@ Public Class SalaChat
             'Envio lo que esta escrito en la caja de texto del mensaje
             Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
             'Añado el msje enviado a mi ventana
-            RichTextBox1.Text = RichTextBox1.Text & "\n" & "Yo: " & RichTextBox3.Text
+            RichTextBox1.Text = RichTextBox1.Text & vbNewLine & "Yo: " & RichTextBox3.Text
             'ListBox1.Items.Add("Yo: " & txtMsje.Text)
             'limpio la caja
             RichTextBox3.Text = ""
@@ -150,7 +150,7 @@ Public Class SalaChat
                 mensaje = mensaje & " :" & datos.Substring(0, po) & " (Antes)"
                 indice = po + 1
                 datos = datos.Substring(indice, datos.Length - indice)
-                RichTextBox1.Text = RichTextBox1.Text & "\n" & mensaje
+                RichTextBox1.Text = RichTextBox1.Text & vbNewLine & mensaje
                 'ListBox1.Items.Add(mensaje)
             Next
             Form1.txtUserCola.Text = ""
@@ -178,7 +178,7 @@ Public Class SalaChat
 
 
                     temp = TextBox1.Text & ":" & temp
-                    RichTextBox1.Text = RichTextBox1.Text & "\n" & temp
+                    RichTextBox1.Text = RichTextBox1.Text & vbNewLine & temp
                     'ListBox1.Items.Add(temp)
 
                 End If
@@ -229,7 +229,7 @@ Public Class SalaChat
                 'Envio lo que esta escrito en la caja de texto del mensaje
                 Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
                 'Añado el msje enviado a mi ventana
-                RichTextBox1.Text = RichTextBox1.Text & "\n" & "Yo: " & RichTextBox3.Text
+                RichTextBox1.Text = RichTextBox1.Text & vbNewLine & "Yo: " & RichTextBox3.Text
                 'ListBox1.Items.Add("Yo: " & txtMsje.Text)
                 'limpio la caja
                 RichTextBox3.Text = ""
