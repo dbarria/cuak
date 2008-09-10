@@ -194,8 +194,10 @@
   <ItemGroup>
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="bin\Debug\autocomplete.xml" />
+    <Content Include="bin\Debug\controladorChat.dll" />
     <Content Include="bin\Debug\ip_port.xml" />
     <Content Include="bin\Release\autocomplete.xml" />
+    <Content Include="bin\Release\controladorChat.dll" />
     <Content Include="Changelog.txt" />
     <Content Include="controladorChat.dll" />
     <Content Include="Changelog.txt" />

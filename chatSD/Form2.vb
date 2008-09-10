@@ -75,6 +75,7 @@ Public Class Form2
 
             Form1.conectar()
             estado = 1
+            Form1.quieroCerrarSesion = 0
             Me.Visible = False
             Form1.Visible = True
             Form1.Timer2.Start()
