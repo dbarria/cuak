@@ -55,6 +55,12 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CerrarSistema.Designer.vb">
+      <DependentUpon>CerrarSistema.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CerrarSistema.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -95,8 +101,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="SalaChat.designer.vb">
+      <DependentUpon>SalaChat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SalaChat.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CerrarSistema.resx">
+      <DependentUpon>CerrarSistema.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <SubType>Designer</SubType>
       <DependentUpon>Form1.vb</DependentUpon>
@@ -119,6 +135,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="SalaChat.resx">
+      <DependentUpon>SalaChat.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -133,8 +153,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\pics\Beaver.bmp" />
+    <Content Include="bin\Debug\ip_port.xml" />
     <Content Include="controladorChat.dll" />
-    <Content Include="ip_port.xml" />
+    <None Include="Resources\usuario.gif" />
+    <None Include="Resources\transparente.png" />
+    <None Include="Resources\noDisp.gif" />
+    <None Include="Resources\noconectado.gif" />
+    <None Include="Resources\historial.gif" />
+    <None Include="Resources\fondo2.png" />
+    <None Include="Resources\fondo.jpg" />
+    <None Include="Resources\exit2.gif" />
+    <None Include="Resources\exit.gif" />
+    <None Include="Resources\conectar.gif" />
+    <None Include="Resources\chatEstado1.gif" />
+    <None Include="Resources\chatEstado.gif" />
+    <None Include="Resources\chat.jpg" />
+    <None Include="Resources\ausente.gif" />
+    <None Include="Resources\agregar.jpg" />
+    <None Include="Resources\agregar.gif" />
+    <None Include="Resources\Adium_anim.jpg" />
+    <None Include="Resources\Adium_anim.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
