@@ -51,7 +51,7 @@ Partial Class Form4
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = Global.chatSD.My.Resources.Resources.registro1
         Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox3.Location = New System.Drawing.Point(25, 27)
+        Me.PictureBox3.Location = New System.Drawing.Point(54, 41)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox3.TabIndex = 35
