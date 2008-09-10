@@ -65,7 +65,7 @@ Public Class Form2
         End If
     End Sub
 
-    Private Sub btnConectar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConectar.Click
+    Private Sub btnConectar_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConectar.Click, MyBase.Enter
         If txtUsuario.Text <> "" And txtClave.Text <> "" Then
 
 
@@ -90,7 +90,7 @@ Public Class Form2
             End If
 
 
-            End If
+        End If
     End Sub
 
     Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
