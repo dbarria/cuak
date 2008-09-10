@@ -10,7 +10,7 @@ Public Class SalaChat
     Public cont As Integer
     Public cont2 As Integer
     Public flagRescr As Integer
-    Public tiempoInicio As Date
+
 
 
 
@@ -141,7 +141,7 @@ Public Class SalaChat
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Dim inicio As Integer
         Dim fin As Integer
-        tiempoInicio = Now
+
 
         'En caso de que existan mensajes en cola para el usuario, procedo a mostrarlos
         If Form1.txtUserCola.Text = TextBox1.Text Then
@@ -250,9 +250,7 @@ Public Class SalaChat
             cont = 0
         End If
 
-        If tiempoInicio.AddSeconds(5) > Now Then
-            Me.barraEstado.Text = ""
-        End If
+        
 
     End Sub
 
@@ -290,4 +288,16 @@ Public Class SalaChat
 
     End Sub
 
+    Private Sub SalaChat_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        Timer2.Interval = 5000
+        Timer2.Enabled = True
+        Timer2.Start()
+
+
+    End Sub
+
+    Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
+        barraEstado.Text = ""
+        Timer2.Stop()
+    End Sub
 End Class

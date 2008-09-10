@@ -41,6 +41,7 @@ Partial Class SalaChat
         Me.barraEstado3 = New System.Windows.Forms.Label
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabConversacion1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -280,6 +281,9 @@ Partial Class SalaChat
         'Timer1
         '
         '
+        'Timer2
+        '
+        '
         'SalaChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -331,4 +335,5 @@ Partial Class SalaChat
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 End Class
