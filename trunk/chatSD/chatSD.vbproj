@@ -155,6 +155,7 @@
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="bin\Debug\ip_port.xml" />
     <Content Include="controladorChat.dll" />
+    <Content Include="Changelog.txt" />
     <None Include="Resources\usuario.gif" />
     <None Include="Resources\transparente.png" />
     <None Include="Resources\noDisp.gif" />

@@ -114,6 +114,8 @@ Partial Class Form2
         '
         'txtUsuario
         '
+        Me.txtUsuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtUsuario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtUsuario.Font = New System.Drawing.Font("Verdana", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUsuario.Location = New System.Drawing.Point(57, 294)
