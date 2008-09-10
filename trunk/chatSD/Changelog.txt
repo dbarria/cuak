@@ -16,7 +16,7 @@
 	2.8 Access Keys
 	
 3 Sala de Chat
-	3.1 Agregar mensaje a la ventana: "Los mensajes seran entregados la proxima vez que el usuario se conecte."
+	3.1 Agregar mensaje a la ventana: "Los mensajes seran entregados la proxima vez que el usuario se conecte." 
 	3.2 Funcionalizar conversación en nueva pestaña si es que se puede
 	3.3 Barra de Estado: Conversión Iniciada no puede durar enternamente
 	3.4 Barra de Estado: "Usuario está escribiendo..." OK
