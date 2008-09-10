@@ -87,6 +87,7 @@ Partial Class SalaChat
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(95, 21)
         Me.TextBox1.TabIndex = 21
+        Me.TextBox1.Visible = False
         '
         'LabelContacto
         '
