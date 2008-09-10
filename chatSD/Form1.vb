@@ -82,7 +82,7 @@ Public Class Form1
             .Conectar()
         End With
         txtUsuario.Text = Form2.txtUsuario.Text
-        Me.Text = "MSN SD - " & txtUsuario.Text
+        'Me.Text = "MSN SD - " & txtUsuario.Text
         Me.LabelEstado.Text = txtUsuario.Text & "@ihc.cl"
 
 
