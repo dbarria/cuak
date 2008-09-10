@@ -491,17 +491,19 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        If (CerrarSistema.ShowDialog() = System.Windows.Forms.DialogResult.OK) Then
+            quieroCerrarSesion = 1
+            Form2.barraEstado.Text = "Cerrando Sesión"
+            Form2.Timer3.Start()
+            Form2.Show()
+            Me.Hide()
+            Me.desconectar()
+            'Wait(10)
+            Form2.estado = 0
+            Form2.Timer3.Stop()
+            Form2.barraEstado.Text = "Sesion Finalizada"
+        End If
 
-        quieroCerrarSesion = 1
-        Form2.barraEstado.Text = "Cerrando Sesión"
-        Form2.Timer3.Start()
-        Form2.Show()
-        Me.Hide()
-        Me.desconectar()
-        'Wait(10)
-        Form2.estado = 0
-        Form2.Timer3.Stop()
-        Form2.barraEstado.Text = "Sesion Finalizada"
 
 
     End Sub
