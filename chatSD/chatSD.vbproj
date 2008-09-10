@@ -61,6 +61,30 @@
     <Compile Include="CerrarSistema.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Desconectar.Designer.vb">
+      <DependentUpon>Desconectar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Desconectar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaltaContraseña.Designer.vb">
+      <DependentUpon>FaltaContraseña.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FaltaContraseña.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaltaCuentaCorreo.Designer.vb">
+      <DependentUpon>FaltaCuentaCorreo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FaltaCuentaCorreo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaltaCuentaUsuario.Designer.vb">
+      <DependentUpon>FaltaCuentaUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FaltaCuentaUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +135,22 @@
   <ItemGroup>
     <EmbeddedResource Include="CerrarSistema.resx">
       <DependentUpon>CerrarSistema.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desconectar.resx">
+      <DependentUpon>Desconectar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaltaContraseña.resx">
+      <DependentUpon>FaltaContraseña.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaltaCuentaCorreo.resx">
+      <DependentUpon>FaltaCuentaCorreo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaltaCuentaUsuario.resx">
+      <DependentUpon>FaltaCuentaUsuario.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
