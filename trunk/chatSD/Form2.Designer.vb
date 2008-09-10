@@ -314,7 +314,7 @@ Partial Class Form2
         Me.MaximizeBox = False
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = " MSN-SD"
+        Me.Text = "Sistema Mensajeria - Inicio Sesión"
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

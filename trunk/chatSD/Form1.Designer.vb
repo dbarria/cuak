@@ -379,7 +379,7 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Loading.........."
+        Me.Text = "Sistema Mensajeria - Principal"
         Me.TransparencyKey = System.Drawing.Color.Blue
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
