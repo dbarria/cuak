@@ -202,7 +202,7 @@ Public Class SalaChat
 
                     temp = TextBox1.Text & ":" & temp
 
-                    RichTextBox1.Text = RichTextBox1.Text & temp & vbNewLine
+                    RichTextBox1.Text = RichTextBox1.Text & temp
                     fin = RichTextBox1.TextLength
                     RichTextBox1.SelectionStart = inicio
                     RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
