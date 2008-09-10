@@ -10,6 +10,8 @@ Public Class Form1
     Public contpre As Int16
     Public largodato As Integer
     Public tempRecibidos As String
+    Public quieroCerrarSesion As Integer = 0
+
     Public Sub Wait(ByVal seconds As Single)
         Dim newDate As Date
         newDate = DateAndTime.Now.AddSeconds(seconds)
@@ -83,6 +85,13 @@ Public Class Form1
 
     End Sub
 
+    Sub desconectar()
+        With WinSockCliente2
+            .Desconectar()
+
+        End With
+    End Sub
+
     Private Sub WinSockCliente_DatosRecibidos(ByVal datosA As String) Handles WinSockCliente2.DatosRecibidos
 
         datos = datosA
@@ -107,14 +116,18 @@ Public Class Form1
     End Sub
 
     Private Sub WinSockCliente_ConexionTerminada() Handles WinSockCliente2.ConexionTerminada
-        With WinSockCliente2
-            'Determino a donde se quiere conectar el usuario
-            .IPDelHost = txtIP.Text
-            .PuertoDelHost = txtPuerto.Text
-            'Me conecto
-            .Conectar()
-        End With
-        MsgBox("Se cerro el servidor, Reconectando")
+
+        If quieroCerrarSesion <> 1 Then
+            With WinSockCliente2
+                'Determino a donde se quiere conectar el usuario
+                .IPDelHost = txtIP.Text
+                .PuertoDelHost = txtPuerto.Text
+                'Me conecto
+                .Conectar()
+            End With
+            MsgBox("Se cerro el servidor, Reconectando")
+        End If
+
     End Sub
 
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
@@ -476,8 +489,11 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        quieroCerrarSesion = 1
         Form2.Show()
         Me.Hide()
+        Me.desconectar()
+
 
     End Sub
 
