@@ -138,12 +138,14 @@ Public Class SalaChat
     End Sub
 
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
-
+        Dim inicio As Integer
+        Dim fin As Integer
 
         'En caso de que existan mensajes en cola para el usuario, procedo a mostrarlos
         If Form1.txtUserCola.Text = TextBox1.Text Then
             Dim i As Integer
             Dim mensaje As String
+            
 
             '-----------este segmento de código arregla los mensajes en cola y los añade a la venta
             'agregando la palabra "(Antes)" al final de cada mensaje
@@ -164,7 +166,12 @@ Public Class SalaChat
                 mensaje = mensaje & " :" & datos.Substring(0, po) & " (Antes)"
                 indice = po + 1
                 datos = datos.Substring(indice, datos.Length - indice)
+                inicio = RichTextBox1.TextLength
                 RichTextBox1.Text = RichTextBox1.Text & vbNewLine & mensaje
+                fin = RichTextBox1.TextLength
+                RichTextBox1.SelectionStart = inicio
+                RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+                RichTextBox1.SelectionColor = Color.Blue
                 'ListBox1.Items.Add(mensaje)
             Next
             Form1.txtUserCola.Text = ""
@@ -189,10 +196,17 @@ Public Class SalaChat
                         flagRescr = 1
                     End If
                 Else
+                    
 
+                    inicio = RichTextBox1.TextLength
 
                     temp = TextBox1.Text & ":" & temp
+
                     RichTextBox1.Text = RichTextBox1.Text & vbNewLine & temp
+                    fin = RichTextBox1.TextLength
+                    RichTextBox1.SelectionStart = inicio
+                    RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+                    RichTextBox1.SelectionColor = Color.Blue
                     'ListBox1.Items.Add(temp)
 
                 End If
