@@ -317,9 +317,9 @@ Partial Class Form1
         Me.LabelEstado.Font = New System.Drawing.Font("Verdana", 9.25!, System.Drawing.FontStyle.Bold)
         Me.LabelEstado.ForeColor = System.Drawing.Color.Transparent
         Me.LabelEstado.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.LabelEstado.Location = New System.Drawing.Point(300, 44)
+        Me.LabelEstado.Location = New System.Drawing.Point(300, 46)
         Me.LabelEstado.Name = "LabelEstado"
-        Me.LabelEstado.Size = New System.Drawing.Size(97, 16)
+        Me.LabelEstado.Size = New System.Drawing.Size(126, 14)
         Me.LabelEstado.TabIndex = 40
         Me.LabelEstado.Text = "Usuario XXX"
         Me.LabelEstado.TextAlign = System.Drawing.ContentAlignment.TopRight
