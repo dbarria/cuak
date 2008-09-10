@@ -97,7 +97,7 @@ Partial Class Form1
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(75, 23)
         Me.btnSalir.TabIndex = 15
-        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.Text = "&Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'txtDatos
