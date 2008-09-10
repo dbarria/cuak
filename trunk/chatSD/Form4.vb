@@ -42,4 +42,8 @@ Public Class Form4
     Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
 
     End Sub
+
+    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label2.Click
+
+    End Sub
 End Class

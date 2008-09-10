@@ -49,6 +49,8 @@ Partial Class Form4
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(61, 27)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(225, 248)
@@ -58,6 +60,7 @@ Partial Class Form4
         '
         'Button2
         '
+        Me.Button2.ForeColor = System.Drawing.Color.DimGray
         Me.Button2.Location = New System.Drawing.Point(75, 209)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -69,9 +72,11 @@ Partial Class Form4
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(53, 35)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(87, 13)
+        Me.Label3.Size = New System.Drawing.Size(121, 14)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Ingrese los datos"
         '
@@ -79,9 +84,11 @@ Partial Class Form4
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(35, 121)
+        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(35, 120)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 13)
+        Me.Label2.Size = New System.Drawing.Size(81, 14)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Password :"
         '
@@ -89,14 +96,17 @@ Partial Class Form4
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(35, 81)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(45, 76)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(50, 13)
+        Me.Label1.Size = New System.Drawing.Size(68, 14)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Nombre :"
         '
         'Button1
         '
+        Me.Button1.ForeColor = System.Drawing.Color.DimGray
         Me.Button1.Location = New System.Drawing.Point(75, 170)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -106,16 +116,16 @@ Partial Class Form4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(94, 118)
+        Me.TextBox2.Location = New System.Drawing.Point(119, 118)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 74)
+        Me.TextBox1.Location = New System.Drawing.Point(119, 74)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
         Me.TextBox1.TabIndex = 0
         '
         'PictureBox1
@@ -134,7 +144,7 @@ Partial Class Form4
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = Global.chatSD.My.Resources.Resources.registro1
         Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.PictureBox3.Location = New System.Drawing.Point(12, 27)
+        Me.PictureBox3.Location = New System.Drawing.Point(25, 27)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox3.TabIndex = 35
