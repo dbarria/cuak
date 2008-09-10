@@ -196,13 +196,14 @@
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="adiumicon.ico" />
     <Content Include="bin\Debug\autocomplete.xml" />
-    <Content Include="bin\Debug\controladorChat.dll" />
     <Content Include="bin\Debug\ip_port.xml" />
     <Content Include="bin\Release\autocomplete.xml" />
     <Content Include="bin\Release\controladorChat.dll" />
     <Content Include="Changelog.txt" />
     <Content Include="controladorChat.dll" />
     <Content Include="Changelog.txt" />
+    <None Include="Resources\registro.PNG" />
+    <None Include="Resources\registro.jpg" />
     <None Include="Resources\usuario.gif" />
     <None Include="Resources\transparente.png" />
     <None Include="Resources\noDisp.gif" />
