@@ -19,6 +19,7 @@ Partial Class Form4
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
         Me.Button2 = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
@@ -117,6 +118,7 @@ Partial Class Form4
         Me.BackgroundImage = Global.chatSD.My.Resources.Resources.fondo2
         Me.ClientSize = New System.Drawing.Size(342, 316)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form4"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = " MSN-SD"

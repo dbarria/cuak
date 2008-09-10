@@ -312,6 +312,7 @@ Partial Class SalaChat
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.TabControl1)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SalaChat"
         Me.ShowIcon = False
         Me.Text = "Sistema Mensajeria - Sala de Chat"
