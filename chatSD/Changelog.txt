@@ -11,7 +11,7 @@
 [OK]2.3 Activar botón de salida
 [OK]2.4 Mensaje de advertencia al cerrar sesión
 [OK]2.5 Que realmente cierre sesión... hay que cambiar el controlador para agregar la funcion de cerrar la sesión
-	2.6 Nombre de usuario aparezca el real
+[OK]2.6 Nombre de usuario aparezca el real
 	2.7 Verificar camino de tabs y enters
 	2.8 Access Keys
 	

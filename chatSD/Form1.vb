@@ -83,6 +83,9 @@ Public Class Form1
         End With
         txtUsuario.Text = Form2.txtUsuario.Text
         Me.Text = "MSN SD - " & txtUsuario.Text
+        Me.LabelEstado.Text = txtUsuario.Text & "@ihc.cl"
+
+
         WinSockCliente2.EnviarDatos(txtUsuario.Text & ": /nueva_conexion")
 
     End Sub
