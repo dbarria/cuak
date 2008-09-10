@@ -12,6 +12,8 @@ Public Class Form1
     Public tempRecibidos As String
     Public quieroCerrarSesion As Integer = 0
 
+
+
     Public Sub Wait(ByVal seconds As Single)
         Dim newDate As Date
         newDate = DateAndTime.Now.AddSeconds(seconds)
@@ -489,10 +491,17 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+
         quieroCerrarSesion = 1
+        Form2.barraEstado.Text = "Cerrando Sesión"
+        Form2.Timer3.Start()
         Form2.Show()
         Me.Hide()
         Me.desconectar()
+        'Wait(10)
+        Form2.estado = 0
+        Form2.Timer3.Stop()
+        Form2.barraEstado.Text = "Sesion Finalizada"
 
 
     End Sub
