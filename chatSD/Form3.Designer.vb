@@ -20,6 +20,7 @@ Partial Class Form3
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Me.Label3 = New System.Windows.Forms.Label
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.txtMsje = New System.Windows.Forms.TextBox
@@ -159,6 +160,7 @@ Partial Class Form3
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.txtMsje)
         Me.Controls.Add(Me.ListBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form3"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
