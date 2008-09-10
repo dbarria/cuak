@@ -154,6 +154,7 @@
   <ItemGroup>
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="bin\Debug\ip_port.xml" />
+    <Content Include="Changelog.txt" />
     <Content Include="controladorChat.dll" />
     <Content Include="Changelog.txt" />
     <None Include="Resources\usuario.gif" />
