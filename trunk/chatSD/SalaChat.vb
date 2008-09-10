@@ -105,7 +105,7 @@ Public Class SalaChat
             Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
             'Añado el msje enviado a mi ventana
             inicio = RichTextBox1.TextLength
-            RichTextBox1.Text = RichTextBox1.Text & "Yo: " & RichTextBox3.Text & vbNewLine
+            RichTextBox1.AppendText("Yo: " & RichTextBox3.Text & vbNewLine)
 
 
             fin = RichTextBox1.TextLength
@@ -168,7 +168,7 @@ Public Class SalaChat
                 indice = po + 1
                 datos = datos.Substring(indice, datos.Length - indice)
                 inicio = RichTextBox1.TextLength
-                RichTextBox1.Text = RichTextBox1.Text & mensaje & vbNewLine
+                RichTextBox1.AppendText(mensaje & vbNewLine)
                 fin = RichTextBox1.TextLength
                 RichTextBox1.SelectionStart = inicio
                 RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
@@ -204,7 +204,7 @@ Public Class SalaChat
 
                     temp = TextBox1.Text & ":" & temp
 
-                    RichTextBox1.Text = RichTextBox1.Text & temp
+                    RichTextBox1.AppendText(temp)
                     fin = RichTextBox1.TextLength
                     RichTextBox1.SelectionStart = inicio
                     RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
@@ -271,7 +271,7 @@ Public Class SalaChat
                 'Añado el msje enviado a mi ventana
                 inicio = RichTextBox1.TextLength
 
-                RichTextBox1.Text = RichTextBox1.Text & "Yo: " & RichTextBox3.Text
+                RichTextBox1.AppendText("Yo: " & RichTextBox3.Text)
 
                 fin = RichTextBox1.TextLength
                 RichTextBox1.SelectionStart = inicio
