@@ -97,7 +97,7 @@ Partial Class Form2
         Me.btnConectar.Location = New System.Drawing.Point(274, 476)
         Me.btnConectar.Name = "btnConectar"
         Me.btnConectar.Size = New System.Drawing.Size(89, 26)
-        Me.btnConectar.TabIndex = 27
+        Me.btnConectar.TabIndex = 4
         Me.btnConectar.Text = "&Ingresar"
         Me.btnConectar.UseVisualStyleBackColor = False
         '
@@ -109,7 +109,7 @@ Partial Class Form2
         Me.txtClave.Name = "txtClave"
         Me.txtClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtClave.Size = New System.Drawing.Size(121, 27)
-        Me.txtClave.TabIndex = 29
+        Me.txtClave.TabIndex = 3
         Me.txtClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtUsuario
@@ -121,7 +121,7 @@ Partial Class Form2
         Me.txtUsuario.Location = New System.Drawing.Point(57, 294)
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(121, 27)
-        Me.txtUsuario.TabIndex = 28
+        Me.txtUsuario.TabIndex = 1
         Me.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
@@ -161,7 +161,7 @@ Partial Class Form2
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(103, 27)
-        Me.TextBox2.TabIndex = 32
+        Me.TextBox2.TabIndex = 2
         Me.TextBox2.Text = "ihc.cl"
         '
         'PictureBox1
@@ -278,6 +278,7 @@ Partial Class Form2
         '
         'Form2
         '
+        Me.AcceptButton = Me.btnConectar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveCaption
