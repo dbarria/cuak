@@ -98,7 +98,7 @@ Partial Class Form2
         Me.btnConectar.Name = "btnConectar"
         Me.btnConectar.Size = New System.Drawing.Size(89, 26)
         Me.btnConectar.TabIndex = 27
-        Me.btnConectar.Text = "Ingresar"
+        Me.btnConectar.Text = "&Ingresar"
         Me.btnConectar.UseVisualStyleBackColor = False
         '
         'txtClave
