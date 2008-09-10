@@ -99,7 +99,6 @@ Public Class SalaChat
             Dim inicio As Integer
             Dim fin As Integer
 
-
             'Envio lo que esta escrito en la caja de texto del mensaje
             Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
             'Añado el msje enviado a mi ventana
