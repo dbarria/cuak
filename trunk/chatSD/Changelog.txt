@@ -14,7 +14,7 @@
 [OK]2.5 Que realmente cierre sesión... hay que cambiar el controlador para agregar la funcion de cerrar la sesión
 [OK]2.6 Nombre de usuario aparezca el real
 	2.7 Verificar camino de tabs y enters
-	2.8 Access Keys
+[OK]2.8 Access Keys
 [OK]2.9 Barra de Título Ad-hoc	
 
 3 Sala de Chat
