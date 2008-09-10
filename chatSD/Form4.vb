@@ -53,7 +53,12 @@ Public Class Form4
             Form1.registrar_usuario(TextBox1.Text, TextBox2.Text)
 
         Else
-            MsgBox("Ingresa los datos")
+            If TextBox1.Text <> "" Then
+                FaltaContraseña.ShowDialog()
+            Else
+
+                FaltaCuentaUsuario.ShowDialog()
+            End If
             TextBox1.Focus()
         End If
     End Sub
