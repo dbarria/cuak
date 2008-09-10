@@ -292,6 +292,8 @@ Public Class SalaChat
         Timer2.Interval = 5000
         Timer2.Enabled = True
         Timer2.Start()
+        Timer1.Start()
+
         ListBox1 = Form1.ListBox2
 
 
