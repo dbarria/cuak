@@ -292,17 +292,53 @@ Public Class SalaChat
         Timer2.Interval = 5000
         Timer2.Enabled = True
         Timer2.Start()
+        ListBox1 = Form1.ListBox2
 
 
     End Sub
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
         barraEstado.Text = ""
-        Timer2.Stop()
+        Dim indice As Integer
+        Dim s As String
+
+        For Each s In Form1.ListBox2.Items
+            indice = buscar(ListBox1, s, 0)
+            If indice = -1 Then
+                Dim ahora As Date
+                ahora = Now
+                barraEstado.Text = "[" & ahora.Hour.ToString() & ":" & ahora.Minute.ToString() & "] Usuario " & s & "se ha conectado"
+                ListBox1.Items.Add(s)
+            End If
+
+        Next
+        For Each s In Form1.ListBox3.Items
+            indice = buscar(ListBox1, s, 0)
+            If Not (indice = -1) Then
+                ListBox1.Items.RemoveAt(indice)
+            End If
+
+        Next
+        'Form1.ListBox2
+
     End Sub
 
     Private Sub RichTextBox1_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles RichTextBox1.GotFocus
         RichTextBox3.Focus()
     End Sub
+
+    Private Function buscar(ByVal Lista As System.Windows.Forms.ListBox, ByVal texto As String, ByVal tipo As Integer) As Integer
+
+        For Each elemento As System.Windows.Forms.ListBox In Lista.Items
+            If elemento.Text = texto Then
+
+                Return elemento.TabIndex
+
+
+            End If
+        Next
+        Return -1
+
+    End Function
 
 End Class
