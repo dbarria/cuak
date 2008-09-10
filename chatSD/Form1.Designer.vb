@@ -50,7 +50,6 @@ Partial Class Form1
         Me.PictureBox6 = New System.Windows.Forms.PictureBox
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -344,18 +343,6 @@ Partial Class Form1
         '
         Me.Timer2.Enabled = True
         '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.LinkLabel2.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LinkLabel2.Location = New System.Drawing.Point(209, 46)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(96, 16)
-        Me.LinkLabel2.TabIndex = 43
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Cerrar Sesión"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -364,7 +351,6 @@ Partial Class Form1
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(526, 507)
-        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.PictureBox6)
         Me.Controls.Add(Me.LabelEstado)
@@ -426,6 +412,5 @@ Partial Class Form1
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents ImageList2 As System.Windows.Forms.ImageList
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
-    Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
 
 End Class
