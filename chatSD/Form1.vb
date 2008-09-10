@@ -486,7 +486,9 @@ Public Class Form1
         If Me.ListView1.SelectedItems.Item(0).ImageIndex = 0 Then
             'usuario conecatdo
             If ventanas.Item(Me.ListView1.SelectedItems.Item(0).Text) = 1 Then
+
                 Dim chatIHC As SalaChat = New SalaChat()
+
                 'Dim fmr3 As Form3 = New Form3()
                 chatIHC.Show()
                 'fmr3.Show()
@@ -691,4 +693,6 @@ Public Class Form1
     Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.SelectedIndexChanged
 
     End Sub
+
+
 End Class
