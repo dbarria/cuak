@@ -204,7 +204,11 @@ Public Class Form1
                     'Si registro es existoso
                 Case "/regisNo"
                     If Form4.TextBox1.Text <> "" Then
-                        MsgBox("Registro con exito")
+                        mensaje.Label1.Text = "Registro con exito"
+                        mensaje.ShowDialog()
+
+
+
                         'Form2.Visible = True
                         'Form4.Visible = False
                     End If
