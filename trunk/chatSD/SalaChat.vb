@@ -111,6 +111,7 @@ Public Class SalaChat
             fin = RichTextBox1.TextLength
             RichTextBox1.SelectionStart = inicio
             RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+            RichTextBox1.Select(inicio, RichTextBox1.TextLength - inicio)
             RichTextBox1.SelectionColor = Color.Red
 
             'ListBox1.Items.Add("Yo: " & txtMsje.Text)
@@ -171,6 +172,7 @@ Public Class SalaChat
                 fin = RichTextBox1.TextLength
                 RichTextBox1.SelectionStart = inicio
                 RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+                RichTextBox1.Select(inicio, RichTextBox1.TextLength - inicio)
                 RichTextBox1.SelectionColor = Color.Blue
                 'ListBox1.Items.Add(mensaje)
             Next
@@ -206,6 +208,8 @@ Public Class SalaChat
                     fin = RichTextBox1.TextLength
                     RichTextBox1.SelectionStart = inicio
                     RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+                    RichTextBox1.Select(inicio, RichTextBox1.TextLength - inicio)
+
                     RichTextBox1.SelectionColor = Color.Blue
                     'ListBox1.Items.Add(temp)
                     RichTextBox1.Focus()
@@ -272,6 +276,7 @@ Public Class SalaChat
                 fin = RichTextBox1.TextLength
                 RichTextBox1.SelectionStart = inicio
                 RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
+                RichTextBox1.Select(inicio, RichTextBox1.TextLength - inicio)
                 RichTextBox1.SelectionColor = Color.Red
                 'ListBox1.Items.Add("Yo: " & txtMsje.Text)
                 'limpio la caja
