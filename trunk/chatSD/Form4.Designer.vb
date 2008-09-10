@@ -21,6 +21,7 @@ Partial Class Form4
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form4))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox
         Me.Button2 = New System.Windows.Forms.Button
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label2 = New System.Windows.Forms.Label
@@ -28,13 +29,19 @@ Partial Class Form4
         Me.Button1 = New System.Windows.Forms.Button
         Me.TextBox2 = New System.Windows.Forms.TextBox
         Me.TextBox1 = New System.Windows.Forms.TextBox
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Lime
         Me.GroupBox1.BackgroundImage = Global.chatSD.My.Resources.Resources.fondo2
+        Me.GroupBox1.Controls.Add(Me.PictureBox2)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -48,6 +55,17 @@ Partial Class Form4
         Me.GroupBox1.TabIndex = 25
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registrando"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox2.Image = Global.chatSD.My.Resources.Resources.Adium_anim
+        Me.PictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox2.Location = New System.Drawing.Point(9, 118)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(20, 28)
+        Me.PictureBox2.TabIndex = 35
+        Me.PictureBox2.TabStop = False
         '
         'Button2
         '
@@ -72,7 +90,7 @@ Partial Class Form4
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Location = New System.Drawing.Point(12, 121)
+        Me.Label2.Location = New System.Drawing.Point(35, 121)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(59, 13)
         Me.Label2.TabIndex = 4
@@ -82,7 +100,7 @@ Partial Class Form4
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Location = New System.Drawing.Point(12, 81)
+        Me.Label1.Location = New System.Drawing.Point(35, 81)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(50, 13)
         Me.Label1.TabIndex = 3
@@ -99,17 +117,39 @@ Partial Class Form4
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(75, 118)
+        Me.TextBox2.Location = New System.Drawing.Point(94, 118)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(100, 20)
         Me.TextBox2.TabIndex = 1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(75, 74)
+        Me.TextBox1.Location = New System.Drawing.Point(94, 74)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(100, 20)
         Me.TextBox1.TabIndex = 0
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox1.Image = Global.chatSD.My.Resources.Resources.usuario
+        Me.PictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox1.Location = New System.Drawing.Point(70, 101)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(20, 28)
+        Me.PictureBox1.TabIndex = 34
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Image = Global.chatSD.My.Resources.Resources.registro1
+        Me.PictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox3.Location = New System.Drawing.Point(12, 27)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox3.TabIndex = 35
+        Me.PictureBox3.TabStop = False
         '
         'Form4
         '
@@ -117,6 +157,8 @@ Partial Class Form4
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.chatSD.My.Resources.Resources.fondo2
         Me.ClientSize = New System.Drawing.Size(342, 316)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form4"
@@ -124,6 +166,9 @@ Partial Class Form4
         Me.Text = " MSN-SD"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -135,4 +180,7 @@ Partial Class Form4
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
 End Class
