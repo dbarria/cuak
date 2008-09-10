@@ -9,6 +9,7 @@ Public Class Form2
     Public estado As Int16
     Public timeCounter As Int16
     Public contp As Int16
+    Dim timeCounter2 As Integer = 0
 
     Private Sub Form2_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
         Dim id As Integer
@@ -209,4 +210,20 @@ Public Class Form2
 
     End Sub
 
+    Private Sub Timer3_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer3.Tick
+
+        If Form1.quieroCerrarSesion = 1 Then
+
+            If estado = 1 Then
+                barraEstado.Text = barraEstado.Text + "."
+                timeCounter2 = timeCounter2 + 1
+                If timeCounter2 = 4 Then
+                    barraEstado.Text = "Cerrando Sesión"
+                    timeCounter2 = 0
+                End If
+            End If
+
+
+        End If
+    End Sub
 End Class

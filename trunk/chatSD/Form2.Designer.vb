@@ -42,6 +42,7 @@ Partial Class Form2
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
         Me.barraEstado = New System.Windows.Forms.Label
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -276,6 +277,10 @@ Partial Class Form2
         '
         Me.Timer2.Interval = 250
         '
+        'Timer3
+        '
+        Me.Timer3.Interval = 250
+        '
         'Form2
         '
         Me.AcceptButton = Me.btnConectar
@@ -341,4 +346,5 @@ Partial Class Form2
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents barraEstado As System.Windows.Forms.Label
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
+    Friend WithEvents Timer3 As System.Windows.Forms.Timer
 End Class
