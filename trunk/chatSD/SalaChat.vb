@@ -10,6 +10,8 @@ Public Class SalaChat
     Public cont As Integer
     Public cont2 As Integer
     Public flagRescr As Integer
+    Public tiempoInicio As Date
+
 
 
     Public Sub Wait(ByVal seconds As Single)
@@ -139,6 +141,7 @@ Public Class SalaChat
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Dim inicio As Integer
         Dim fin As Integer
+        tiempoInicio = Now
 
         'En caso de que existan mensajes en cola para el usuario, procedo a mostrarlos
         If Form1.txtUserCola.Text = TextBox1.Text Then
@@ -226,7 +229,7 @@ Public Class SalaChat
         If cont2 = 23 Then
             flagRescr = 0
             'TextBox2.Text = ""
-            barraEstado.Text = "Conversación iniciada"
+            barraEstado.Text = ""
             cont2 = 0
         End If
 
@@ -246,6 +249,11 @@ Public Class SalaChat
             'TextBox2.Text = ""
             cont = 0
         End If
+
+        If tiempoInicio.AddSeconds(5) > Now Then
+            Me.barraEstado.Text = ""
+        End If
+
     End Sub
 
     Private Sub RichTextBox3_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles RichTextBox3.KeyPress
