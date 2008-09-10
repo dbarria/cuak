@@ -105,6 +105,10 @@ Public Class SalaChat
             'Añado el msje enviado a mi ventana
             inicio = RichTextBox1.TextLength
             RichTextBox1.Text = RichTextBox1.Text & vbNewLine & "Yo: " & RichTextBox3.Text
+            
+
+
+
             fin = RichTextBox1.TextLength
             RichTextBox1.SelectionStart = inicio
             RichTextBox1.SelectionLength = RichTextBox1.TextLength - inicio
