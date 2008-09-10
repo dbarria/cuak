@@ -300,4 +300,9 @@ Public Class SalaChat
         barraEstado.Text = ""
         Timer2.Stop()
     End Sub
+
+    Private Sub RichTextBox1_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles RichTextBox1.GotFocus
+        RichTextBox3.Focus()
+    End Sub
+
 End Class
