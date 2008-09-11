@@ -133,7 +133,9 @@ Public Class Form1
                 'Me conecto
                 .Conectar()
             End With
-            MsgBox("Se cerro el servidor, Reconectando")
+            'MsgBox("Se cerro el servidor, Reconectando")
+            mensaje.Label1.Text = "Se cerro el servidor, Reconectando"
+            mensaje.ShowDialog()
         End If
 
     End Sub
@@ -190,16 +192,22 @@ Public Class Form1
                 Case "/Conectado"
                     Me.Visible = False
                     'MsgBox("el usuario ya esta conectado")
-                    mensaje.Label1.Text = "el usuario ya esta conectado"
+                    mensaje.Label1.Text = "El usuario ya esta conectado"
                     mensaje.ShowDialog()
                     Form2.Visible = True
 
                 Case "/Noexiste"
                     Me.Visible = False
+                    If Form2.estado = 1 Then
+                        Me.quieroCerrarSesion = 1
+                        Me.desconectar()
+                        Form2.estado = 0
+                    End If
                     'MsgBox("el usuario no existe")
-                    mensaje.Label1.Text = "el usuario no existe"
+                    mensaje.Label1.Text = "El usuario no existe"
                     mensaje.ShowDialog()
                     Form2.Visible = True
+
 
                 Case "/regisSi"
                     If Form4.TextBox1.Text <> "" Then
