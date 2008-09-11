@@ -211,7 +211,7 @@
     <Content Include="autocomplete.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Changelog.txt" />
+    <None Include="Changelog.txt" />
     <Content Include="Changelog.txt" />
     <Content Include="ip_port.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
