@@ -189,17 +189,23 @@ Public Class Form1
                 'Si reggistrado existe, se mestra mensaje
                 Case "/Conectado"
                     Me.Visible = False
-                    MsgBox("el usuario ya esta conectado")
+                    'MsgBox("el usuario ya esta conectado")
+                    mensaje.Label1.Text = "el usuario ya esta conectado"
+                    mensaje.ShowDialog()
                     Form2.Visible = True
 
                 Case "/Noexiste"
                     Me.Visible = False
-                    MsgBox("el usuario no existe")
+                    'MsgBox("el usuario no existe")
+                    mensaje.Label1.Text = "el usuario no existe"
+                    mensaje.ShowDialog()
                     Form2.Visible = True
 
                 Case "/regisSi"
                     If Form4.TextBox1.Text <> "" Then
-                        MsgBox("el usuario ya existe")
+                        mensaje.Label1.Text = "El usuario ya existe"
+                        mensaje.ShowDialog()
+                        'MsgBox("el usuario ya existe")
                         Form4.TextBox1.Text = ""
                         Form4.TextBox1.Focus()
                     End If
