@@ -207,9 +207,7 @@
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="adiumicon.ico" />
     <Content Include="autocomplete.xml" />
-    <Content Include="bin\Release\controladorChat.dll" />
     <Content Include="Changelog.txt" />
-    <Content Include="controladorChat.dll" />
     <Content Include="Changelog.txt" />
     <Content Include="ip_port.xml" />
     <None Include="chatSD.sql" />
@@ -233,6 +231,9 @@
     <None Include="Resources\agregar.gif" />
     <None Include="Resources\Adium_anim.jpg" />
     <None Include="Resources\Adium_anim.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
