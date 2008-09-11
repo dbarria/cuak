@@ -360,4 +360,11 @@ Public Class SalaChat
 
     End Function
 
+    Protected Overrides Sub Finalize()
+        
+
+        Form1.ventanas.Item(TextBox1.Text) = 1
+        LabelContacto.Text = "hola hola"
+        MyBase.Finalize()
+    End Sub
 End Class

@@ -5,6 +5,8 @@ Partial Class SalaChat
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Form1.ventanas.Item(TextBox1.Text) = 1
+        LabelContacto.Text = "hola hola"
         If disposing AndAlso components IsNot Nothing Then
             components.Dispose()
         End If
