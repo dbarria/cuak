@@ -366,6 +366,7 @@ Partial Class Form1
         Me.Controls.Add(Me.txtPuerto)
         Me.Controls.Add(Me.txtIP)
         Me.DoubleBuffered = True
+        Me.ForeColor = System.Drawing.Color.Coral
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "Form1"
