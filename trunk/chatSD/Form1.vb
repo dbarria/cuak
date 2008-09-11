@@ -11,6 +11,9 @@ Public Class Form1
     Public largodato As Integer
     Public tempRecibidos As String
     Public quieroCerrarSesion As Integer = 0
+    Public ultimoConectado As String = "none"
+
+
 
 
 
@@ -595,6 +598,7 @@ Public Class Form1
                     'el usuario est como no conectado en mi lista, lo cambio a conectado
 
                     ListView1.Items.Item(indiceItem).ImageIndex = 0
+                    ultimoConectado = s
 
 
                     'ListView1.Items.RemoveAt(indiceItem)

@@ -255,7 +255,12 @@ Public Class SalaChat
             cont = 0
         End If
 
-        
+        If Form1.ultimoConectado <> "none" Then
+            Dim ahora As Date
+            ahora = Now
+            barraEstado.Text = "[" & ahora.Hour.ToString() & ":" & ahora.Minute.ToString() & "] Usuario " & Form1.ultimoConectado & " se ha conectado"
+            Form1.ultimoConectado = "none"
+        End If
 
     End Sub
 
@@ -300,33 +305,13 @@ Public Class SalaChat
         Timer2.Start()
         Timer1.Start()
 
-        ListBox1 = Form1.ListBox2
 
 
     End Sub
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
         barraEstado.Text = ""
-        Dim indice As Integer
-        Dim s As String
-
-        For Each s In Form1.ListBox2.Items
-            indice = buscar(ListBox1, s, 0)
-            If indice = -1 Then
-                Dim ahora As Date
-                ahora = Now
-                barraEstado.Text = "[" & ahora.Hour.ToString() & ":" & ahora.Minute.ToString() & "] Usuario " & s & "se ha conectado"
-                ListBox1.Items.Add(s)
-            End If
-
-        Next
-        For Each s In Form1.ListBox3.Items
-            indice = buscar(ListBox1, s, 0)
-            If Not (indice = -1) Then
-                ListBox1.Items.RemoveAt(indice)
-            End If
-
-        Next
+        
         'Form1.ListBox2
 
     End Sub
