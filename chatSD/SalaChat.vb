@@ -102,7 +102,7 @@ Public Class SalaChat
             Dim fin As Integer
 
             'Envio lo que esta escrito en la caja de texto del mensaje
-            Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text)
+            Form1.enviar_mensaje(TextBox1.Text, RichTextBox3.Text & vbNewLine)
             'Añado el msje enviado a mi ventana
             inicio = RichTextBox1.TextLength
             RichTextBox1.AppendText("Yo: " & RichTextBox3.Text & vbNewLine)
@@ -203,6 +203,7 @@ Public Class SalaChat
                     inicio = RichTextBox1.TextLength
 
                     temp = TextBox1.Text & ":" & temp
+
 
                     RichTextBox1.AppendText(temp)
                     fin = RichTextBox1.TextLength
