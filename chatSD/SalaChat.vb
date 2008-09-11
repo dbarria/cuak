@@ -10,6 +10,8 @@ Public Class SalaChat
     Public cont As Integer
     Public cont2 As Integer
     Public flagRescr As Integer
+    Public horaCambio As Date = Now
+
 
 
 
@@ -195,6 +197,8 @@ Public Class SalaChat
                 If temp = " ::::estoy_escribiendo::::" Then
                     If cont = 0 Then
                         barraEstado.Text = "Esta escribiendo"
+                        horaCambio = Now
+                        horaCambio = horaCambio.AddSeconds(4)
                         flagRescr = 1
                     End If
                 Else
@@ -235,6 +239,8 @@ Public Class SalaChat
             flagRescr = 0
             'TextBox2.Text = ""
             barraEstado.Text = ""
+            horaCambio = Now
+            horaCambio = horaCambio.AddSeconds(4)
             cont2 = 0
         End If
 
@@ -258,7 +264,21 @@ Public Class SalaChat
         If Form1.ultimoConectado <> "none" Then
             Dim ahora As Date
             ahora = Now
-            barraEstado.Text = "[" & ahora.Hour.ToString() & ":" & ahora.Minute.ToString() & "] Usuario " & Form1.ultimoConectado & " se ha conectado"
+            Dim hora As String = ahora.Hour.ToString
+            Dim minuto As String = ahora.Minute.ToString
+
+
+            If ahora.Hour < 10 Then
+                hora = 0 & ahora.Hour.ToString
+            End If
+
+            If ahora.Minute < 10 Then
+                hora = 0 & ahora.Minute.ToString
+            End If
+
+            barraEstado.Text = "[" & hora & ":" & minuto & "] " & Form1.ultimoConectado & " conectado"
+            horaCambio = Now
+            horaCambio = horaCambio.AddSeconds(4)
             Form1.ultimoConectado = "none"
         End If
 
@@ -310,8 +330,11 @@ Public Class SalaChat
     End Sub
 
     Private Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
-        barraEstado.Text = ""
-        
+        If horaCambio.CompareTo(Now) < 0 Then
+            barraEstado.Text = ""
+        End If
+
+
         'Form1.ListBox2
 
     End Sub
