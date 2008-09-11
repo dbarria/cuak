@@ -67,6 +67,7 @@ Public Class Form4
         If Form2.estado = 1 Then
             Form1.quieroCerrarSesion = 1
             Form1.desconectar()
+            Form1.Dispose()
             Form2.estado = 0
         End If
 
