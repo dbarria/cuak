@@ -203,14 +203,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Ayuda.chm" />
+    <None Include="Ayuda.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="adiumicon.ico" />
-    <Content Include="autocomplete.xml" />
+    <Content Include="autocomplete.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Changelog.txt" />
     <Content Include="Changelog.txt" />
-    <Content Include="ip_port.xml" />
-    <None Include="chatSD.sql" />
+    <Content Include="ip_port.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\registro.PNG" />
     <None Include="Resources\registro.jpg" />
     <None Include="Resources\usuario.gif" />
