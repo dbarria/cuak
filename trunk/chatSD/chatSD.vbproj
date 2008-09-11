@@ -203,15 +203,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Ayuda.chm" />
     <None Include="bin\Debug\pics\Beaver.bmp" />
     <Content Include="adiumicon.ico" />
-    <Content Include="bin\Debug\autocomplete.xml" />
-    <Content Include="bin\Debug\ip_port.xml" />
-    <Content Include="bin\Release\autocomplete.xml" />
+    <Content Include="autocomplete.xml" />
     <Content Include="bin\Release\controladorChat.dll" />
     <Content Include="Changelog.txt" />
     <Content Include="controladorChat.dll" />
     <Content Include="Changelog.txt" />
+    <Content Include="ip_port.xml" />
     <None Include="chatSD.sql" />
     <None Include="Resources\registro.PNG" />
     <None Include="Resources\registro.jpg" />
