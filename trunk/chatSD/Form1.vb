@@ -191,7 +191,7 @@ Public Class Form1
                 'Si reggistrado existe, se mestra mensaje
                 Case "/Conectado"
                     Me.Visible = False
-                    'MsgBox("el usuario ya esta conectado")
+                    'MsgBox("el usuario ya esta conectado") 
                     mensaje.Label1.Text = "El usuario ya esta conectado"
                     mensaje.ShowDialog()
                     Form2.Visible = True
