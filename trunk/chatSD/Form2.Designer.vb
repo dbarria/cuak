@@ -43,12 +43,14 @@ Partial Class Form2
         Me.barraEstado = New System.Windows.Forms.Label
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtPuerto
@@ -281,6 +283,17 @@ Partial Class Form2
         '
         Me.Timer3.Interval = 250
         '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox7.Image = Global.chatSD.My.Resources.Resources.registro1
+        Me.PictureBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.PictureBox7.Location = New System.Drawing.Point(105, 519)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox7.TabIndex = 43
+        Me.PictureBox7.TabStop = False
+        '
         'Form2
         '
         Me.AcceptButton = Me.btnConectar
@@ -290,6 +303,7 @@ Partial Class Form2
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(424, 589)
+        Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.barraEstado)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.PictureBox4)
@@ -321,6 +335,7 @@ Partial Class Form2
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -347,4 +362,5 @@ Partial Class Form2
     Friend WithEvents barraEstado As System.Windows.Forms.Label
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
+    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
 End Class
